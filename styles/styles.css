@@ -1,10 +1,98 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*:before,
+*:after {
   border: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-family: "Roboto", sans-serif; }
+
 ul {
   list-style: none; }
+
+h1 {
+  font-size: 1.563em; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #572EE5;
+  font-weight: 700; }
+
+header {
+  width: 100%;
+  margin-bottom: 50px; }
+  header .head {
+    border-top: solid 5px #572EE5;
+    display: flex;
+    justify-content: space-between; }
+    header .head img,
+    header .head img {
+      margin: 5%; }
+    header .head img {
+      align-self: center; }
+  header div h1 {
+    margin: 0 auto;
+    max-width: 285px;
+    color: #572EE5;
+    text-align: center; }
+    header div h1 .g_color {
+      color: #50E3C2; }
+  header div ul li {
+    text-align: center; }
+    header div ul li img {
+      width: 70%; }
+  header div .form {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 27px;
+    border: solid 1px #572EE5;
+    padding-left: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly; }
+    header div .form input::placeholder {
+      text-align: center;
+      font-size: 1em;
+      color: #9CAFC3; }
+    header div .form input {
+      height: 48px;
+      border-radius: 27px; }
+    header div .form img {
+      width: 25px; }
+  header div .text1 {
+    margin-top: 30px;
+    text-align: center; }
+    header div .text1 span {
+      display: block;
+      margin: 0 auto;
+      color: #572EE5;
+      max-width: 225px;
+      line-height: 25px; }
+
+main {
+  background-color: #F3F5F8;
+  padding: 60px 0 60px 0; }
+  main .main-text {
+    text-align: center; }
+    main .main-text span {
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
+      line-height: 25px; }
+
+footer {
+  border-bottom: solid 5px #572EE5;
+  text-align: center; }
+  footer div .prueba {
+    display: block;
+    margin: 50px 0 20px 0; }
+  footer div ul li {
+    display: inline;
+    padding: 5px; }
+  footer div .copy {
+    display: block;
+    margin: 45px 0 20px 0; }
 
 /*# sourceMappingURL=styles.css.map */

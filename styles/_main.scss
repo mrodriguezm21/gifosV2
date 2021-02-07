@@ -1,5 +1,13 @@
-main{
-    .head{
-        
+main {
+  background-color: $third_color;
+  padding: 60px 0 60px 0;
+  .main-text {
+    text-align: center;
+    span {
+      display: block;
+      margin: 0 auto;
+      max-width: 300px;
+      line-height: 25px;
     }
+  }
 }
