@@ -1,22 +1,32 @@
 header {
+  border-top: solid 5px $main_color;
   width: 100%;
   margin-bottom: 50px;
+
   .head {
-    border-top: solid 5px $main_color;
+    // Comienzo de clase "head"
+    margin: 5%;
     display: flex;
     justify-content: space-between;
-    img,
-    img {
-      margin: 5%;
+    .test {
+      display: flex;
+      #burger {
+        align-self: center;
+      }
+      ul {
+        display: none;
+      }
+      #btn_add {
+        display: none;
+      }
     }
-    img {
-      align-self: center;
-    }
+    // Final de clase "head"
   }
   div {
     h1 {
+      font-size: 25px;
       margin: 0 auto;
-      max-width: 285px;
+      max-width: 250px;
       color: $main_color;
       text-align: center;
       .g_color {
@@ -31,7 +41,7 @@ header {
         }
       }
     }
-    .form {
+    form {
       margin: 0 auto;
       width: 90%;
       border-radius: 27px;
@@ -39,7 +49,7 @@ header {
       padding-left: 10px;
       height: 50px;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
 
       input::placeholder {
         text-align: center;
@@ -48,10 +58,16 @@ header {
       }
       input {
         height: 48px;
+        width: 150px;
+        margin-left: 15px;
         border-radius: 27px;
+        outline: none
+        
       }
-      img{
+      
+      img {
         width: 25px;
+        margin-right: 15px;
       }
     }
     .text1 {

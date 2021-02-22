@@ -1,21 +1,30 @@
 *,
 *:before,
 *:after {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-family: $font;
+html {
+  font-family: $font;
 }
-ul{
-    list-style: none;    
+ul {
+  list-style: none;
 }
-h1{
-    font-size: 1.563em;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $main_color;
+  font-weight: 700;
 }
-h1,h2,h3,h4,h5,h6{
-    color: $main_color;
-    font-weight: 700;
+a:visited {
+  color: unset;
+}
+a {
+  text-decoration: none;
 }
