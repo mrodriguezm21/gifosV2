@@ -1,0 +1,21 @@
+footer {
+  border-bottom: solid 5px $main_color;
+  text-align: center;
+
+  div {      
+    .prueba {
+        display: block;
+      margin: 50px 0 20px 0;
+    }
+    ul {
+      li {
+        display: inline;
+        padding: 5px;
+      }
+    }
+    .copy {
+        display: block;
+      margin: 45px 0 20px 0;
+    }
+  }
+}
