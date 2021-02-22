@@ -34,10 +34,12 @@ header {
       }
     }
     ul {
+      margin: 0 auto;
+      width: 70%;
       li {
         text-align: center;
         img {
-          width: 70%;
+          width: 100%;
         }
       }
     }
@@ -61,10 +63,9 @@ header {
         width: 150px;
         margin-left: 15px;
         border-radius: 27px;
-        outline: none
-        
+        outline: none;
       }
-      
+
       img {
         width: 25px;
         margin-right: 15px;

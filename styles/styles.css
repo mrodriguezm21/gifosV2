@@ -52,10 +52,13 @@ header {
     text-align: center; }
     header .search h1 .g_color {
       color: #50E3C2; }
-  header .search ul li {
-    text-align: center; }
-    header .search ul li img {
-      width: 70%; }
+  header .search ul {
+    margin: 0 auto;
+    width: 70%; }
+    header .search ul li {
+      text-align: center; }
+      header .search ul li img {
+        width: 100%; }
   header .search form {
     margin: 0 auto;
     width: 90%;
@@ -135,7 +138,10 @@ footer {
     max-width: 500px;
     font-size: 35px; }
   header .search ul {
-    width: 30%;
-    margin: 0 auto; } }
+    width: 30%; }
+    header .search ul li img {
+      width: 100%; }
+  header .search form {
+    width: 35%; } }
 
 /*# sourceMappingURL=styles.css.map */

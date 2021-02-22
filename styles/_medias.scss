@@ -27,13 +27,22 @@
       }
     }
     .search{
+      
         h1{
             max-width: 500px;
             font-size: 35px;
         }
         ul{
           width: 30%;
-          margin: 0 auto;          
+           
+          li{
+            img{
+              width: 100%;
+            }
+          }      
+        }
+        form{
+          width: 35%;
         }
     }
   }
