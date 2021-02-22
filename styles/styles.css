@@ -115,13 +115,13 @@ header {
 footer {
   border-bottom: solid 5px #572EE5;
   text-align: center; }
-  footer div .prueba span {
+  footer .foot .footer-divider span {
     display: block;
     margin: 50px 0 20px 0; }
-  footer div .prueba ul li {
+  footer .foot .footer-divider ul li {
     display: inline;
     padding: 5px; }
-  footer div .copy {
+  footer .foot .copy {
     display: block;
     margin: 45px 0 20px 0; }
 
@@ -178,21 +178,21 @@ footer {
 
   footer {
     margin: 2.5% 0% 0%; }
-    footer div {
+    footer .foot {
       margin: 0 5% 1.2%;
       display: flex;
       justify-content: space-between; }
-      footer div .prueba {
+      footer .foot .footer-divider {
         width: 20%;
         display: flex;
         justify-content: space-evenly; }
-        footer div .prueba span {
+        footer .foot .footer-divider span {
           display: block;
           margin: unset; }
-        footer div .prueba ul li {
+        footer .foot .footer-divider ul li {
           display: inline;
           padding: 0 10px; }
-      footer div .copy {
+      footer .foot .copy {
         display: block;
         margin: unset; } }
 
