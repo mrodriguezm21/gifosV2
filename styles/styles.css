@@ -36,13 +36,13 @@ header {
     margin: 5%;
     display: flex;
     justify-content: space-between; }
-    header .head .test {
+    header .head .burger-responsive {
       display: flex; }
-      header .head .test #burger {
+      header .head .burger-responsive #burger {
         align-self: center; }
-      header .head .test ul {
+      header .head .burger-responsive ul {
         display: none; }
-      header .head .test #btn_add {
+      header .head .burger-responsive #btn_add {
         display: none; }
   header .search h1 {
     font-size: 25px;
@@ -92,24 +92,33 @@ header {
       max-width: 225px;
       line-height: 25px; }
 
-main {
+.main {
   background-color: #F3F5F8;
   padding: 60px 0 60px 0; }
-  main .main-text {
+  .main .main-text1 {
     text-align: center; }
-    main .main-text span {
+    .main .main-text1 span {
       display: block;
       margin: 0 auto;
-      max-width: 300px;
+      max-width: 163px;
       line-height: 25px; }
+  .main .slider ul {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center; }
+    .main .slider ul li {
+      display: inline;
+      padding: 0 10px; }
+      .main .slider ul li img {
+        width: 100%; }
 
 footer {
   border-bottom: solid 5px #572EE5;
   text-align: center; }
-  footer div .prueba {
+  footer div .prueba span {
     display: block;
     margin: 50px 0 20px 0; }
-  footer div ul li {
+  footer div .prueba ul li {
     display: inline;
     padding: 5px; }
   footer div .copy {
@@ -120,20 +129,20 @@ footer {
   header .head {
     margin: 1% 5% 5%;
     justify-content: space-between; }
-    header .head .test {
+    header .head .burger-responsive {
       width: 50%;
       justify-content: space-evenly; }
-      header .head .test #burger {
+      header .head .burger-responsive #burger {
         display: none; }
-      header .head .test ul {
+      header .head .burger-responsive ul {
         display: block;
         align-self: center; }
-        header .head .test ul li {
+        header .head .burger-responsive ul li {
           display: inline-block;
           padding: 0 15px;
           color: #572EE5;
           font-weight: 700; }
-      header .head .test #btn_add {
+      header .head .burger-responsive #btn_add {
         display: block; }
   header .search h1 {
     max-width: 500px;
@@ -145,6 +154,46 @@ footer {
   header .search form {
     width: 35%; }
   header .search .text1 span {
-    max-width: unset; } }
+    max-width: unset; }
+
+  .main .main-text1 span {
+    max-width: unset; }
+  .main .slider {
+    display: block; }
+    .main .slider ul {
+      align-self: center;
+      width: 100%; }
+      .main .slider ul #btn-left {
+        background-image: url("../assets/button-slider-left.svg");
+        width: 40px;
+        height: 40px;
+        align-self: center;
+        outline: none; }
+      .main .slider ul #btn-right {
+        background-image: url("../assets/Button-Slider-right.svg");
+        width: 40px;
+        height: 40px;
+        align-self: center;
+        outline: none; }
+
+  footer {
+    margin: 2.5% 0% 0%; }
+    footer div {
+      margin: 0 5% 1.2%;
+      display: flex;
+      justify-content: space-between; }
+      footer div .prueba {
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly; }
+        footer div .prueba span {
+          display: block;
+          margin: unset; }
+        footer div .prueba ul li {
+          display: inline;
+          padding: 0 10px; }
+      footer div .copy {
+        display: block;
+        margin: unset; } }
 
 /*# sourceMappingURL=styles.css.map */
