@@ -195,5 +195,18 @@ footer {
       footer .foot .copy {
         display: block;
         margin: unset; } }
+.cam_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cam_flex .cam_content {
+  border: 1px solid #572EE5;
+  width: 50%;
+  height: 390px;
+}
 
 /*# sourceMappingURL=styles.css.map */

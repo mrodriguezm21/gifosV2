@@ -1,4 +1,5 @@
 //objeto para llamar a la camara
+
 function getStreamAndRecord() {
    navigator.mediaDevices.getUserMedia({
       audio: false,
@@ -8,6 +9,7 @@ function getStreamAndRecord() {
    })
       .then(function (stream) {
          video.srcObject = stream;
+
          video.play()
       })
 }
