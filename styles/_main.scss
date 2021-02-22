@@ -1,4 +1,4 @@
-main {
+.main {
   background-color: $third_color;
   padding: 60px 0 60px 0;
   .main-text {
@@ -11,4 +11,14 @@ main {
     }
   }
 
+}
+
+.cam_flex {
+  display: flex;
+  justify-content: space-around;
+  .cam_content {
+    border: 1px solid #572EE5;
+    width: 50%;
+    height: 390px;
+  }
 }
