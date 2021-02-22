@@ -84,11 +84,11 @@
   footer {
     // Inicio de footer
     margin: 2.5% 0% 0%;
-    div {
-      margin: 0 5% 1.2%;
+    .foot {
+      margin: 0 5% 2.5%;
       display: flex;
       justify-content: space-between;
-      .prueba {
+      .footer-divider {
         width: 20%;
         display: flex;
         justify-content: space-evenly;
