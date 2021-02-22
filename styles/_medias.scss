@@ -5,7 +5,7 @@
       margin: 1% 5% 5%;
       justify-content: space-between;
 
-      .test {
+      .burger-responsive {
         width: 50%;
         justify-content: space-evenly;
         #burger {
@@ -42,11 +42,72 @@
       form {
         width: 35%;
       }
-      .text1{
-        span{
+      .text1 {
+        span {
           max-width: unset;
         }
       }
     }
+    // Fin de header
+  }
+  .main {
+    // Inicio de main
+    .main-text1 {
+      span {
+        max-width: unset;
+      }
+    }
+    .slider {
+      display: block;
+      ul {
+        align-self: center;
+        width: 100%;
+
+        #btn-left {
+          background-image: url("../assets/button-slider-left.svg");
+          width: 40px;
+          height: 40px;
+          align-self: center;
+          outline: none;
+        }
+        #btn-right {
+          background-image: url("../assets/Button-Slider-right.svg");
+          width: 40px;
+          height: 40px;
+          align-self: center;
+          outline: none;
+        }
+      }
+    }
+    // Fin de main
+  }
+  footer {
+    // Inicio de footer
+    margin: 2.5% 0% 0%;
+    div {
+      margin: 0 5% 1.2%;
+      display: flex;
+      justify-content: space-between;
+      .prueba {
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        span {
+          display: block;
+          margin: unset;
+        }
+        ul {
+          li {
+            display: inline;
+            padding: 0 10px;
+          }
+        }
+      }
+      .copy {
+        display: block;
+        margin: unset;
+      }
+    }
+    // Fin de footer
   }
 }
