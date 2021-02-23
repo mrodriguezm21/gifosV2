@@ -208,5 +208,8 @@ footer {
   width: 50%;
   height: 390px;
 }
-
+.oscuro{ 
+  background-color: #1f1f1f; 
+  color: #f1eded; 
+}
 /*# sourceMappingURL=styles.css.map */

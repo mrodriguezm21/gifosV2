@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
     <title>GIFOS</title>
     <script src="https://kit.fontawesome.com/ba4c12eac5.js" crossorigin="anonymous"></script>
-    <script src="../scripts/media.js"></script>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
@@ -16,18 +15,15 @@
         <div class="head">
             <img src="../assets/logo-mobile.svg" alt="Logo" id="logo" />
             <div class="burger-responsive">
-              <img src=".../assets/burger.svg" alt="Menu hamburguesa" id="burger" />
-              <ul>
-                <li><a href="">MODO NOCTURNO</a></li>
-                <li><a href="">FAVORITOS</a></li>
-                <li><a href="">MIS GIFOS</a></li>
-              </ul>
-              <a href="../index.html"
-                ><img
-                  src="../assets/CTA-crear-gifo-active.svg"
-                  alt="Boton para agregar"
-                  id="btn_add"
-              /></a>
+                <img src="../assets/burger.svg" alt="Menu hamburguesa" id="burger" />
+                <ul>
+                    <li>
+                        <a onclick="cambiarModo()" href="blank">MODO NOCTURNO</a>
+                    </li>
+                    <li><a href="">FAVORITOS</a></li>
+                    <li><a href="">MIS GIFOS</a></li>
+                </ul>
+                <img src="../assets/CTA-crear-gifo-active.svg" alt="Boton para agregar" id="btn_add" />
             </div>
           </div>
     </header>
@@ -41,9 +37,14 @@
             <img src="../assets/pelicula.svg" alt="rollo de pelicula">
         </div>
 
-        <input class="boton" type="button" src="../scripts/media.js" onclick="getStreamAndRecord()">
-    </main>
+        <input class="boton" type="button" src="../scripts/media.js" onclick="getStreamAndRecord()" width="100px"
+            height="100px">
 
+    </main>
+    <script src="../scripts/darkmode.js"></script>
+    <!--modo oscuro-->
+    <script src="../scripts/media.js"></script>
+    <!--camara-->
 </body>
 
 
