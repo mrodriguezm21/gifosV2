@@ -9,7 +9,6 @@ function getStreamAndRecord() {
    })
       .then(function (stream) {
          video.srcObject = stream;
-
          video.play()
       })
 }
