@@ -1,11 +1,11 @@
 # gifos
-        {Sprint2}-====-{Project}
-<---Mario Jose Rodriguez Machacon--->
-    github: https://github.com/mrodriguezm21
+        ######{Sprint2}-====-{Project}
+*Mario Jose Rodriguez Machacon
+    -[github](https://github.com/mrodriguezm21)
 
-<---Duvan Andres Villadiego Hoyos--->
-    github: https://github.com/DuvanVilladiego
+*Duvan Andres Villadiego Hoyos
+    -[github](https://github.com/DuvanVilladiego)
 
 Deployment: https://mrodriguezm21.github.io/gifos/
 
-        {Protalento}-====-{Acamica}
+        [Protalento](https://protalento.org) -====- [Acamica](https://www.acamica.com)
