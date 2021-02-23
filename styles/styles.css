@@ -344,4 +344,10 @@ footer div .copy {
     margin: unset;
   }
 }
+
+.boton {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
 /*# sourceMappingURL=styles.css.map */
