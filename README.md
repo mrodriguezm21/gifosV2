@@ -1,5 +1,5 @@
 # gifos
-###### Sprint2                Project
+###### Sprint2      -----      Project
 [Mario Jose Rodriguez Machacon](https://github.com/mrodriguezm21)
     
 
@@ -7,4 +7,4 @@
 
 ***[Deployment](https://mrodriguezm21.github.io/gifos/)***
 
-[Protalento](https://protalento.org)      }-----{      [Acamica](https://www.acamica.com)
+[Protalento](https://protalento.org)      -----      [Acamica](https://www.acamica.com)
