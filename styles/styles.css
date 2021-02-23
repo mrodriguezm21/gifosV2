@@ -350,4 +350,8 @@ footer div .copy {
   height: 100px;
   background-color: black;
 }
+.oscuro{ 
+  background-color: #1f1f1f; 
+  color: #f1eded; 
+}
 /*# sourceMappingURL=styles.css.map */
