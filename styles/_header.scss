@@ -1,22 +1,33 @@
 header {
-  border-top: solid 5px $main_color;
+  border-top: solid 5px var(--color-linea);
+  background-color: var(--background);
   width: 100%;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 
   .head {
     // Comienzo de clase "head"
     margin: 5%;
     display: flex;
     justify-content: space-between;
+
+    .logo {
+      background: var(--logo-mobile) no-repeat;
+      width: 56px;
+      height: 49px;
+    }
+
     .burger-responsive {
       display: flex;
-      #burger {
+      .burger {
         align-self: center;
+        background: var(--menu-hamburguesa) no-repeat;
+        width: 15px;
+        height: 14px;
       }
       ul {
         display: none;
       }
-      #btn_add {
+      #btn-add {
         display: none;
       }
     }
@@ -24,11 +35,12 @@ header {
   }
   .search {
     h1 {
-      font-size: 25px;
+      font-size: 30px;
       margin: 0 auto;
       max-width: 250px;
-      color: $main_color;
+      color: var(--color-texto);
       text-align: center;
+      margin-bottom: 20px;
       .g_color {
         color: $sec_color;
       }
@@ -48,29 +60,57 @@ header {
       margin: 0 auto;
       width: 90%;
       border-radius: 27px;
-      border: solid 1px $main_color;
+      border: solid 1px var(--color-texto);
       padding-left: 10px;
       height: 50px;
       display: flex;
       justify-content: space-between;
+      overflow: hidden;
 
       input::placeholder {
-        text-align: center;
-        font-size: 1em;
+        font-size: 13px;
         color: $fourth_color;
       }
       input {
-        height: 48px;
-        width: 150px;
-        margin-left: 15px;
-        border-radius: 27px;
         outline: none;
+        align-self: center;
+        height: 50px;
+        width: 300px;
+        margin-left: 15px;
+        padding-left: 10px;
+        border-radius: 27px;
+        font-size: 13px;
+        background-color: var(--background);
+        color: var(--color-texto);
       }
-
-      img {
-        width: 25px;
+      #search-icon {
+        align-self: center;
+        background-image: var(--icono-busqueda);
+        width: 20px;
+        height: 20px;
         margin-right: 15px;
+        cursor: pointer;
       }
+    }
+    .results {
+      padding: 50px;
+      max-width: 1400px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 0 auto;
+    }
+    .cuadrogip {
+      padding: 10px 0;
+      width: 23%;
+      height: 300px;
+    }
+    .button-more {
+      margin: 0 auto;
+      background: var(--ver-mas);
+      width: 127px;
+      height: 50px;
+      cursor: pointer;
     }
     .text1 {
       margin-top: 30px;
@@ -78,10 +118,74 @@ header {
       span {
         display: block;
         margin: 0 auto;
-        color: $main_color;
+        color: var(--color-texto);
         max-width: 225px;
         line-height: 25px;
       }
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    // Inicio de header
+    .head {
+      margin: 1% 5% 5%;
+      justify-content: space-between;
+
+      .logo {
+        background: var(--logo) no-repeat;
+        width: 68px;
+        height: 60px;
+      }
+      .burger-responsive {
+        width: 50%;
+        justify-content: space-evenly;
+        .burger {
+          display: none;
+        }
+        ul {
+          display: block;
+          align-self: center;
+          li {
+            display: inline-block;
+            padding: 0 15px;
+            color: var(--color-texto);
+            font-weight: 700;
+            span {
+              cursor: pointer;
+            }
+          }
+        }
+        #btn-add {
+          background: var(--crear);
+          width: 54px;
+          height: 54px;
+          display: block;
+        }
+      }
+    }
+    .search {
+      h1 {
+        max-width: 500px;
+        font-size: 35px;
+      }
+      ul {
+        width: 30%;
+        li {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      form {
+        width: 35%;
+      }
+      .text1 {
+        span {
+          max-width: unset;
+        }
+      }
+    }
+    // Fin de header
   }
 }

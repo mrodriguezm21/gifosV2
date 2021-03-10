@@ -19,9 +19,12 @@
             padding: 0 15px;
             color: $main_color;
             font-weight: 700;
+            span {
+              cursor: pointer;
+            }
           }
         }
-        #btn_add {
+        #btn-add{
           display: block;
         }
       }
@@ -61,7 +64,7 @@
       display: block;
       ul {
         align-self: center;
-        width: 100%; 
+        width: 100%;
 
         #btn-left {
           background-image: url("../assets/button-slider-left.svg");
@@ -98,7 +101,7 @@
         }
         ul {
           li {
-            display: inline;
+            display: inline-block;
             padding: 0 10px;
           }
         }

@@ -1,12 +1,13 @@
 footer {
-  border-bottom: solid 5px $main_color;
+  border-bottom: solid 5px (--color-linea);
+  background-color: var(--background);
+  color: var(--color-texto);
   text-align: center;
-
   .foot {
     .footer-divider{
       span {
         display: block;
-        margin: 50px 0 20px 0;
+        padding: 50px 0 20px 0;
       }
       ul {
         li {
@@ -17,7 +18,38 @@ footer {
     }
     .copy {
       display: block;
-      margin: 45px 0 20px 0;
+      padding: 45px 0 20px 0;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {    
+    padding: 2.5% 0% 0%;
+    .foot {
+      padding: 0 5% 2.5%;
+      display: flex;
+      justify-content: space-between;
+      .footer-divider {
+        width: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        span {
+          
+          margin: unset;
+        }
+        ul {
+          align-self: flex-end;
+          li {
+            display: inline-block;
+            padding: 50px 10px;
+          }
+        }
+      }
+      .copy {
+        display: block;
+        margin: unset;
+      }
+    }
+    // Fin de footer
   }
 }

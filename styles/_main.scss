@@ -1,5 +1,7 @@
+@import "variables";
 .main {
-  background-color: $third_color;
+  background-color: var(--background-trending);
+  color: var(--color-texto);
   padding: 60px 0 60px 0;
   .main-text1 {
     text-align: center;
@@ -24,14 +26,39 @@
       }
     }
   }
-}
-
-.cam_flex {
-  display: flex;
-  justify-content: space-around;
-  .cam_content {
-    border: 1px solid #572EE5;
-    width: 50%;
-    height: 390px;
   }
-}
+
+  @media screen and (min-width: 768px) {
+    .main {      
+    // Inicio de main
+    .main-text1 {
+      span {
+        max-width: unset;
+      }
+    }
+    .slider {
+      display: block;
+      ul {
+        align-self: center;
+        width: 100%;
+
+        #btn-left {
+          background: var(--boton-scroll-izquierda) no-repeat;
+          width: 40px;
+          height: 40px;
+          align-self: center;
+          outline: none;
+        }
+        #btn-right {
+          background: var(--boton-scroll-derecha) no-repeat;
+          width: 40px;
+          height: 40px;
+          align-self: center;
+          outline: none;
+        }
+      }
+    }
+    // Fin de main
+  }
+  }
+  
