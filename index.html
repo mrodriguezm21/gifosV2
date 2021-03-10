@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="under-construction.png"
+      type="image/x-icon"
+    />
+    <title>GIFOS</title>
     <script
       src="https://kit.fontawesome.com/ba4c12eac5.js"
       crossorigin="anonymous"
@@ -13,20 +18,22 @@
   <body>
     <header>
       <div class="head">
-        <img src="assets/logo-mobile.svg" alt="Logo" id="logo" />
+        <div class="logo"></div>
         <div class="burger-responsive">
-          <img src="assets/burger.svg" alt="Menu hamburguesa" id="burger" />
+          <div class="burger"></div>
           <ul>
-            <li><a href="">MODO NOCTURNO</a></li>
+            <li><span id="btndarkmode">MODO NOCTURNO</span></li>
             <li><a href="">FAVORITOS</a></li>
             <li><a href="">MIS GIFOS</a></li>
           </ul>
           <a href="pages/webcam.html"
-            ><img
+            ><div id="btn-add"></div>
+            <!-- <img
               src="assets/button-crear-gifo.svg"
               alt="Boton para agregar"
-              id="btn_add"
-          /></a>
+              id="btn-add"
+          /> --></a
+          >
         </div>
       </div>
 
@@ -41,29 +48,35 @@
         </ul>
 
         <form action="">
-          <input type="search" name="" id="" placeholder="Busca GIFOS y más" />
-          <img src="assets/icon-search.svg" alt="" />
+          <input
+            type="text"
+            name=""
+            id="searchbox"
+            placeholder="Busca GIFOS y más"
+          />
+          <div id="search-icon"></div>
         </form>
+        <div class="results"></div>
         <div class="text1">
           <h3>Trending:</h3>
-          <span>Reactions, Entertainment, Sports, Stickers, Artists</span>
+          <span id="trending-searches"
+            >Reactions, Entertainment, Sports, Stickers, Artists</span
+          >
         </div>
       </div>
     </header>
     <main class="main">
-
       <div class="main-text1">
-
         <h2>Trending GIFOS</h2>
         <span>Mira los últimos GIFOS de nuestra comunidad.</span>
       </div>
       <div class="slider">
         <ul>
-          <input type="button" id="btn-left" />
-          <li><img src="https://via.placeholder.com/300" alt="" /></li>
-          <li><img src="https://via.placeholder.com/300" alt="" /></li>
-          <li><img src="https://via.placeholder.com/300" alt="" /></li>
-          <input type="button" id="btn-right" />
+          <div type="button" id="btn-left"></div>
+          <li><img src="https://via.placeholder.com/357x275" alt="" /></li>
+          <li><img src="https://via.placeholder.com/357x275" alt="" /></li>
+          <li><img src="https://via.placeholder.com/357x275" alt="" /></li>
+          <div type="button" id="btn-right"></div>
         </ul>
       </div>
     </main>
@@ -86,5 +99,7 @@
         <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
       </div>
     </footer>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/search.js"></script>
   </body>
 </html>

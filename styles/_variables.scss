@@ -1,16 +1,80 @@
 // Importacion de elementos
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 // Variables
 
-// Colores
+// Colores light mode
+:root {
+  --crear: url("../assets/button-crear-gifo.svg");
+  --crear-active: url("../assets/CTA-crear-gifo-active.svg");
+  --crear-hover: url("../assets/CTA-crear-gifo-hover.svg");
+  --menu-hamburguesa: url("../assets/burger.svg");
+  --menu-hamburguesa-cerrar: url("../assets/close.svg");
+  --logo-mobile: url("../assets/logo-mobile.svg");
+  --logo: url("../assets/logo-desktop.svg");
+  --header-background-mobile: rgba(87, 46, 229, 0.9);
+  --cabecera-background-mobile: #ffffff;
+  --background: #ffffff;
+  --background-trending: #f3f5f8;
+  --color-texto: #572ee5;
+  --color-texto-crear: #ffffff;
+  --color-linea: #572ee5;
+  --color-texto-pie: #000000;
+  --color-input: #9cafc3;
+  --borde-input: 1px solid #572ee5;
+  --icono-busqueda: url("../assets/icon-search.svg");
+  --boton-scroll-derecha: url("../assets/button-slider-right.svg");
+  --boton-scroll-izquierda: url("../assets/button-slider-left.svg");
+  --facebook: url("../assets/icon_facebook.svg");
+  --twitter: url("../assets/icon_twitter.svg");
+  --instagram: url("../assets/icon_instagram.svg");
+  --ver-mas: url("../assets/CTA-ver-mas.svg");
+  --ver-mas-hover: url("../assets/CTA-ver-mas-hover.svg");
+  --paso-a-paso: url("../assets/paso-a-paso.svg");
+  --paso-a-paso-hover: url("../assets/paso-a-paso-hover.svg");
+}
 
-$main_color: #572EE5;
-$sec_color: #50E3C2;
-$third_color: #F3F5F8;
-$fourth_color: #9CAFC3;
+//TEMA NOCTURNO
+[data-theme="dark"] {
+  --crear: url("../assets/CTA-crar-gifo-modo-noc.svg");
+  --crear-active: url("../assets/CTA-crear-gifo-active-modo-noc.svg");
+  --crear-hover: url("../assets/CTA-crear-gifo-hover-modo-noc.svg");
+  --menu-hamburguesa: url("../assets/burger-modo-noct.svg");
+  --menu-hamburguesa-cerrar: url("../assets/close-modo-noct.svg");
+  --logo-mobile: url("../assets/logo-mobile-modo-noct.svg");
+  --logo: url("../assets/logo-modo-noc.svg");
+  --header-background-mobile: #000000;
+  --cabecera-background-mobile: #37383c;
+  --background: #37383c;
+  --background-trending: #222326;
+  --color-texto: #ffffff;
+  --color-linea: #000000;
+  --color-texto-pie: #ffffff;
+  --color-texto-crear: #000000;
+  --color-input: #ffffff;
+  --borde-input: 1px solid ##ffffff;
+  --icono-busqueda: url("../assets/icon-search-mod-noc.svg");
+  --boton-scroll-derecha: url("../assets/button-slider-right-md-noct.svg");
+  --boton-scroll-izquierda: url("../assets/button-slider-left-md-noct.svg");
+  --facebook: url("../assets/icon_facebook_noc.svg");
+  --instagram: url("../assets/icon_instagram_noc.svg");
+  --twitter: url("../assets/icon_twitter_noc.svg");
+  --ver-mas: url("../assets/CTA-ver+-modo-noc.svg");
+  --ver-mas-hover: url("../assets/CTA-ver+hover-modo-noc.svg");
+  --paso-a-paso: url("../assets/paso-a-paso-mod-noc.svg");
+  --paso-a-paso-hover: url("../assets/paso-a-paso-hover-mod-noc.svg");
+}
+$main_color: #572ee5;
+$sec_color: #50e3c2;
+$third_color: #f3f5f8;
+$fourth_color: #9cafc3;
+
+// Colores dark mode
+$dmain_color: #37383c;
+$dsec_color: #222326;
+$dthird_color: #000;
+$dfourth_color: #fff;
 
 // Fuentes
 
-$font:'Roboto', sans-serif;
-
+$font: "Roboto", sans-serif;
