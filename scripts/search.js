@@ -47,11 +47,15 @@ function showGifs() {
   let salida = "";
   data
     .then((response) => {
-      console.log(response);
       response.forEach((ImageData) => {
         salida += `<img src="${ImageData.images.fixed_width.url}" class="cuadrogip"/>`;
       });
-      document.getElementsByClassName("results")[0].innerHTML = salida;
+      if (salida.length <= 0) {
+        document.getElementsByClassName("results")[0].innerHTML =
+          "No se encontró ningún gif :(";
+      } else {
+        document.getElementsByClassName("results")[0].innerHTML = salida;
+      }
     })
     .catch((err) => console.error(err));
 }
