@@ -2,51 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
-    <title> Crear GIFOS</title>
-    <script src="https://kit.fontawesome.com/ba4c12eac5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
+  <title> Crear GIFOS</title>
+  <script src="https://kit.fontawesome.com/ba4c12eac5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body lang="en">
-    <header>
-        <div class="head">
-            <a href="../index.html">
-          <div class="logo"></div></a>
-          <div class="burger-responsive">
-            <div class="burger"></div>
-            <ul>
-              <li> <span id="btndarkmode">MODO NOCTURNO</span></li>
-              <li><a href="">FAVORITOS</a></li>
-              <li><a href="">MIS GIFOS</a></li>
-            </ul>
-            <a href="pages/webcam.html"
-              ><div id="btn-add"></div>
-              <!-- <img
+  <header>
+    <div class="head">
+      <a href="../index.html">
+        <div class="logo"></div>
+      </a>
+      <div class="burger-responsive">
+        <div class="burger"></div>
+        <ul>
+          <li> <span id="btndarkmode">MODO NOCTURNO</span></li>
+          <li><a href="">FAVORITOS</a></li>
+          <li><a href="">MIS GIFOS</a></li>
+        </ul>
+        <a href="pages/webcam.html">
+          <div id="btn-add"></div>
+          <!-- <img
                 src="assets/button-crear-gifo.svg"
                 alt="Boton para agregar"
                 id="btn-add"
-            /> --></a>
-          </div>
+            /> -->
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="create">
+    <div class="cam_flex">
+      <div class="move1">
+        <div>
+          <img src="../assets/camara.svg" alt="camara de pelicula">
+          <img src="../assets/element-luz-camara.svg" alt="luz proviniente del lente de la camara">
         </div>
-    <main>
-        <div class="cam_flex">
-            <div class="cam_flex">
-                <img src="../assets/camara.svg" alt="camara de pelicula">
-                <img src="../assets/element-luz-camara.svg" alt="luz proviniente del lente de la camara">
-            </div>
-            <div class="cam_content"><video id="video" src="../scripts/media.js" onclick="play()"></video></div>
-            <img src="../assets/pelicula.svg" alt="rollo de pelicula">
+      </div>
+      <div class="cam_content">
+        <video class="cam" id="video" src="../scripts/media.js" onclick="play()"></video>
+      </div>
+      <div><img class="rail" src="../assets/pelicula.svg" alt="rollo de pelicula"></div>
+    </div>
+    <div class="center">
+      <div class="pasos">
+        <div>
+          <img src="/assets/paso-a-paso.svg" alt="paso 1">
+          <img src="/assets/paso-a-paso.svg" alt="paso 2">
+          <img src="/assets/paso-a-paso.svg" alt="paso 3">
         </div>
-        <input class="boton" type="button" src="../scripts/media.js" onclick="getStreamAndRecord()" width="100px"
-            height="100px">
-    </main>
-    <script src="../scripts/darkmode.js"></script>
-    <!--modo oscuro-->
-    <script src="../scripts/media.js"></script>
-    <!--camara-->
+      </div>
+      <div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    </div>
+    <input class="boton" type="button" src="../scripts/media.js" onclick="getStreamAndRecord()">
+  </main>
+
+  <script src="../scripts/darkmode.js"></script>
+  <!--modo oscuro-->
+  <script src="../scripts/media.js"></script>
+  <!--camara-->
 </body>
 
 
