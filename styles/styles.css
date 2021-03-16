@@ -21,9 +21,6 @@
   --icono-busqueda: url("../assets/icon-search.svg");
   --boton-scroll-derecha: url("../assets/button-slider-right.svg");
   --boton-scroll-izquierda: url("../assets/button-slider-left.svg");
-  --facebook: url("../assets/icon_facebook.svg");
-  --twitter: url("../assets/icon_twitter.svg");
-  --instagram: url("../assets/icon_instagram.svg");
   --ver-mas: url("../assets/CTA-ver-mas.svg");
   --ver-mas-hover: url("../assets/CTA-ver-mas-hover.svg");
   --paso-a-paso: url("../assets/paso-a-paso.svg");
@@ -51,9 +48,6 @@
   --icono-busqueda: url("../assets/icon-search-mod-noc.svg");
   --boton-scroll-derecha: url("../assets/button-slider-right-md-noct.svg");
   --boton-scroll-izquierda: url("../assets/button-slider-left-md-noct.svg");
-  --facebook: url("../assets/icon_facebook_noc.svg");
-  --instagram: url("../assets/icon_instagram_noc.svg");
-  --twitter: url("../assets/icon_twitter_noc.svg");
   --ver-mas: url("../assets/CTA-ver+-modo-noc.svg");
   --ver-mas-hover: url("../assets/CTA-ver+hover-modo-noc.svg");
   --paso-a-paso: url("../assets/paso-a-paso-mod-noc.svg");
@@ -219,7 +213,7 @@ header .search form input {
   border-radius: 27px;
   font-size: 13px;
   background-color: var(--background);
-  color: var(--color-texto);
+  color: var(--color-input);
 }
 
 header .search form #search-icon {
@@ -362,9 +356,6 @@ header .search .text1 span {
   --icono-busqueda: url("../assets/icon-search.svg");
   --boton-scroll-derecha: url("../assets/button-slider-right.svg");
   --boton-scroll-izquierda: url("../assets/button-slider-left.svg");
-  --facebook: url("../assets/icon_facebook.svg");
-  --twitter: url("../assets/icon_twitter.svg");
-  --instagram: url("../assets/icon_instagram.svg");
   --ver-mas: url("../assets/CTA-ver-mas.svg");
   --ver-mas-hover: url("../assets/CTA-ver-mas-hover.svg");
   --paso-a-paso: url("../assets/paso-a-paso.svg");
@@ -392,9 +383,6 @@ header .search .text1 span {
   --icono-busqueda: url("../assets/icon-search-mod-noc.svg");
   --boton-scroll-derecha: url("../assets/button-slider-right-md-noct.svg");
   --boton-scroll-izquierda: url("../assets/button-slider-left-md-noct.svg");
-  --facebook: url("../assets/icon_facebook_noc.svg");
-  --instagram: url("../assets/icon_instagram_noc.svg");
-  --twitter: url("../assets/icon_twitter_noc.svg");
   --ver-mas: url("../assets/CTA-ver+-modo-noc.svg");
   --ver-mas-hover: url("../assets/CTA-ver+hover-modo-noc.svg");
   --paso-a-paso: url("../assets/paso-a-paso-mod-noc.svg");
@@ -435,6 +423,98 @@ header .search .text1 span {
 
 .main .slider ul li img {
   width: 100%;
+}
+
+.create {
+  margin: 0px 5%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.create .cam_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.create .cam_flex .move1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create .cam_flex .move1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.create .cam_flex .move1 div img {
+  position: relative;
+  right: 5%;
+}
+
+.create .cam_flex .cam_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #572ee5;
+  width: 60%;
+  height: 500px;
+}
+
+.create .cam_flex .rail {
+  position: relative;
+  top: 110%;
+  left: 60px;
+}
+
+.create .center {
+  margin: 5%;
+}
+
+.create .center .pasos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.create .center .pasos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.create .center .line {
+  border: solid 5px #572ee5;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 25px;
+  width: 100%;
+  margin-top: 3%;
 }
 
 @media screen and (min-width: 768px) {
