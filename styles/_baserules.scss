@@ -28,3 +28,107 @@ a:visited {
 a {
   text-decoration: none;
 }
+.gif {
+  width: 357px;
+  height: 275px;
+  position: relative;
+  margin: 10px 0;
+  .prueba-gifs {
+    padding-top: 7px;
+    display: none;
+    position: absolute;
+    width: 195px;
+    top: 0;
+    li {
+      .b-like,
+      .b-down,
+      .b-exp {
+        position: absolute;
+        right: -155px;
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+      }
+      .b-like {
+        right: -75px;
+        &:hover {
+          background-image: url(../assets/icon-fav-hover.svg);
+        }
+      }
+      .b-down {
+        right: -115px;
+        &:hover {
+          background-image: url(../assets/icon-download-hover.svg);
+        }
+      }
+      .b-exp{
+        &:hover{
+          background-image: url(../assets/icon-max-hover.svg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: $main_color;
+    img {
+      opacity: 0.3;
+    }
+    .prueba-gifs {
+      display: block;
+    }
+  }
+}
+.gif2 {
+  width: 100%;
+  height: 275px;
+  position: relative;  
+  
+  .prueba-gifs {
+    padding-top: 7px;
+    display: none;
+    position: absolute;
+    width: 195px;
+    top: 0;
+    li {
+      .b-like,
+      .b-down,
+      .b-exp {
+        position: absolute;
+        right: -155px;
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+      }
+      .b-like {
+        right: -75px;
+        &:hover {
+          background-image: url(../assets/icon-fav-hover.svg);
+          background-repeat: no-repeat;
+        }
+      }
+      .b-down {
+        right: -115px;
+        &:hover {
+          background-image: url(../assets/icon-download-hover.svg);
+          background-repeat: no-repeat;
+        }
+      }
+      .b-exp{
+        &:hover{
+          background-image: url(../assets/icon-max-hover.svg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  &:hover {
+    background-color: $main_color;
+    img {
+      opacity: 0.3;
+    }
+    .prueba-gifs {
+      display: block;
+    }
+  }
+}

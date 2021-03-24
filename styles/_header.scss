@@ -102,9 +102,8 @@ header {
       margin: 0 auto;
     }
     .cuadrogip {
-      padding: 10px 0;
-      width: 23%;
-      height: 300px;
+      width: 100%;
+      height: 275px;      
     }
     .button-more {
       margin: 0 auto;
@@ -125,6 +124,20 @@ header {
       }
     }
   }
+
+// Favorites
+.favs{
+  text-align: center;
+  .fav-span{
+    display: block;
+    padding-top: 5px;
+    color: var(--color-texto);
+    font-size: 25px;
+    font-weight: 500;
+    
+  }
+}
+
 }
 @media screen and (min-width: 768px) {
   header {
