@@ -48,7 +48,14 @@ function showGifs() {
   data
     .then((response) => {
       response.forEach((ImageData) => {
-        salida += `<img src="${ImageData.images.fixed_width.url}" class="cuadrogip"/>`;
+        salida += ` <div class="gif">
+        <img src="${ImageData.images.fixed_width.url}" alt="" class="cuadrogip"/>
+        <ul class="prueba-gifs">
+          <li><img class="b-like" src="assets/icon-fav.svg" alt="" /></li>
+          <li><img class="b-down" src="assets/icon-download.svg" alt="" /></li>
+          <li><img class="b-exp" src="assets/icon-max-normal.svg" alt="" /></li>
+        </ul>
+      </div>`;
       });
       if (salida.length <= 0) {
         document.getElementsByClassName("results")[0].innerHTML =
