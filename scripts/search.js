@@ -5,10 +5,14 @@ const searchTerm = document.getElementById("searchbox");
 const toReplace = document.getElementsByClassName("text1")[0];
 const trendText = document.getElementById("trending-searches");
 
-btnSearch.addEventListener("click", showGifs);
+
+let test = 8;
+
 btnSearch.addEventListener("click", () => {
-  searchTerm.value = "";
+  test = 8;
+  showGifs();
 });
+
 
 async function trendingText() {
   let url = `https://api.giphy.com/v1/trending/searches?&limit=5&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
@@ -34,16 +38,16 @@ function showTrending() {
     .catch((err) => console.error(err));
 }
 
-async function getGifs() {
+async function getGifs(gifLen) {
   let inputValue = searchTerm.value;
-  let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=12&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
+  let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=${gifLen}&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
   const resp = await fetch(url);
   const json = await resp.json();
   const data = await json.data;
   return data;
 }
 function showGifs() {
-  let data = getGifs();
+  let data = getGifs(Gifs());
   let salida = "";
   data
     .then((response) => {
@@ -58,4 +62,8 @@ function showGifs() {
       }
     })
     .catch((err) => console.error(err));
+}
+function Gifs() {
+  test = test + 4;
+  return test
 }
