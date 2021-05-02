@@ -103,7 +103,7 @@ header {
     }
     .cuadrogip {
       width: 100%;
-      height: 275px;      
+      height: 275px;
     }
     .button-more {
       margin: 0 auto;
@@ -111,6 +111,10 @@ header {
       width: 127px;
       height: 50px;
       cursor: pointer;
+      display: block;
+      &:hover {
+        background: var(--ver-mas-hover);
+      }
     }
     .text1 {
       margin-top: 30px;
@@ -125,19 +129,17 @@ header {
     }
   }
 
-// Favorites
-.favs{
-  text-align: center;
-  .fav-span{
-    display: block;
-    padding-top: 5px;
-    color: var(--color-texto);
-    font-size: 25px;
-    font-weight: 500;
-    
+  // Favorites
+  .favs {
+    text-align: center;
+    .fav-span {
+      display: block;
+      padding-top: 5px;
+      color: var(--color-texto);
+      font-size: 25px;
+      font-weight: 500;
+    }
   }
-}
-
 }
 @media screen and (min-width: 768px) {
   header {
@@ -156,6 +158,9 @@ header {
         justify-content: space-evenly;
         .burger {
           display: none;
+        }
+        a {
+          color: var(--color-texto);
         }
         ul {
           display: block;
@@ -193,10 +198,10 @@ header {
       }
       form {
         width: 35%;
-        input{
+        input {
           width: 90%;
         }
-        #search-icon{
+        #search-icon {
           width: 5%;
         }
       }

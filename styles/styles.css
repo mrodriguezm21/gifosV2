@@ -121,6 +121,7 @@ a {
 
 .gif .prueba-gifs li .b-like:hover {
   background-image: url(../assets/icon-fav-hover.svg);
+  background-repeat: no-repeat;
 }
 
 .gif .prueba-gifs li .b-down {
@@ -129,6 +130,7 @@ a {
 
 .gif .prueba-gifs li .b-down:hover {
   background-image: url(../assets/icon-download-hover.svg);
+  background-repeat: no-repeat;
 }
 
 .gif .prueba-gifs li .b-exp:hover {
@@ -151,6 +153,9 @@ a {
 .gif2 {
   width: 100%;
   height: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
@@ -165,24 +170,12 @@ a {
 .gif2 .prueba-gifs li .b-like,
 .gif2 .prueba-gifs li .b-down,
 .gif2 .prueba-gifs li .b-exp {
-  position: absolute;
-  right: -155px;
-  width: 32px;
-  height: 32px;
   opacity: 1;
-}
-
-.gif2 .prueba-gifs li .b-like {
-  right: -75px;
 }
 
 .gif2 .prueba-gifs li .b-like:hover {
   background-image: url(../assets/icon-fav-hover.svg);
   background-repeat: no-repeat;
-}
-
-.gif2 .prueba-gifs li .b-down {
-  right: -115px;
 }
 
 .gif2 .prueba-gifs li .b-down:hover {
@@ -204,7 +197,12 @@ a {
 }
 
 .gif2:hover .prueba-gifs {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 header {
@@ -370,6 +368,11 @@ header .search .button-more {
   width: 127px;
   height: 50px;
   cursor: pointer;
+  display: block;
+}
+
+header .search .button-more:hover {
+  background: var(--ver-mas-hover);
 }
 
 header .search .text1 {
@@ -417,6 +420,9 @@ header .favs .fav-span {
   }
   header .head .burger-responsive .burger {
     display: none;
+  }
+  header .head .burger-responsive a {
+    color: var(--color-texto);
   }
   header .head .burger-responsive ul {
     display: block;
