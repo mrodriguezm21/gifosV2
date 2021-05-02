@@ -2,18 +2,23 @@ const btnSearch = document.getElementById("search-icon");
 const searchTerm = document.getElementById("searchbox");
 const toReplace = document.getElementsByClassName("text1")[0];
 
-let test = 8;
+
+let test = 9;
 
 btnSearch.addEventListener("click", () => {
-  test = 8;
+  test = 9;
   showGifs();
 });
-btnSearch.addEventListener("click", () => {
-  searchTerm.value = "";
+
+searchTerm.addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+    test = 9;
+    event.preventDefault();
+    showGifs();
+  }
 });
 
-async function getGifs(gifLen) {
-  let inputValue = searchTerm.value;
+async function getGifs(gifLen, inputValue) {
   let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=${gifLen}&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
   const resp = await fetch(url);
   const json = await resp.json();
@@ -21,17 +26,17 @@ async function getGifs(gifLen) {
   return data;
 }
 function showGifs() {
-  let data = getGifs(Gifs());
+  let data = getGifs(Gifs(), searchTerm.value);
   let salida = "";
   data
     .then((response) => {
       response.forEach((ImageData) => {
         salida += ` <div class="gif">
-        <img src="${ImageData.images.fixed_width.url}" alt="" class="cuadrogip"/>
+        <img src="${ImageData.images.fixed_width.url}"  class="cuadrogip"/>
         <ul class="prueba-gifs">
-          <li><img class="b-like" src="assets/icon-fav.svg" alt="" /></li>
-          <li><img class="b-down" src="assets/icon-download.svg" alt="" /></li>
-          <li><img class="b-exp" src="assets/icon-max-normal.svg" alt="" /></li>
+          <li><img class="b-like" src="assets/icon-fav.svg" /></li>
+          <li><img class="b-down" src="assets/icon-download.svg" /></li>
+          <li><img class="b-exp" src="assets/icon-max-normal.svg" /></li>
         </ul>
       </div>`;
       });
@@ -44,12 +49,10 @@ function showGifs() {
     })
     .catch((err) => console.error(err));
 
-  console.log(toReplace.outerHTML);
-
-  toReplace.outerHTML = `<span class="button-more" onclick="showGifs()"></span>`;
+  toReplace.outerHTML = `<button class="button-more" onclick="showGifs()"></button>`;
 }
 
 function Gifs() {
-  test = test + 4;
+  test = test + 3;
   return test;
 }

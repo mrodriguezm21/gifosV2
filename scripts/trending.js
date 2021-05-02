@@ -1,5 +1,7 @@
 window.onload = showTrending;
 const trendText = document.getElementById("trending-searches");
+import "./search.js";
+
 
 
 
@@ -16,7 +18,8 @@ async function trendingText() {
     data
       .then((response) => {
         for (let i = 0; i < 5; i++) {
-          salida += response[i];
+          salida += `<a id="${i}"> ${response[i]} </a>`;
+          // `<span id="${i}" class="x"> ${response[i]} </span>`
           if (i < 4) {
             salida += ", ";
           }
