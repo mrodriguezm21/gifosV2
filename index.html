@@ -47,22 +47,28 @@
           <li><img src="assets/ilustra_header.svg" alt="" /></li>
         </ul>
 
-        <form action="">
-          <input
-            type="text"
-            name=""
-            id="searchbox"
-            placeholder="Busca GIFOS y más"
-            autocomplete="off"
-          />
-          <div id="search-icon"></div>
+        <form action="" onsubmit="return false;">
+          <div class="prueba-input">
+            <input
+              type="text"
+              name=""
+              id="searchbox"
+              placeholder="Busca GIFOS y más"
+              autocomplete="off"
+            />
+            <div id="search-icon"></div>
+          </div>
+          <div class="prueba-form">
+            <span>Hola1</span>
+            <span>Hola2</span>
+            <span>Hola3</span>
+            <span>Hola4</span>
+          </div>
         </form>
         <div class="results"></div>
         <div class="text1">
           <h3>Trending:</h3>
-          <span id="trending-searches"
-            >Reactions, Entertainment, Sports, Stickers, Artists</span
-          >
+          <span id="trending-searches"></span>
         </div>
       </div>
     </header>
@@ -78,9 +84,13 @@
             <div class="gif2">
               <img src="https://via.placeholder.com/357x275" alt="" />
               <ul class="prueba-gifs">
-                <li><img class="b-like" src="assets/icon-fav.svg" alt="" ></li>
-                <li><img class="b-down" src="assets/icon-download.svg" alt="" ></li>
-                <li><img class="b-exp" src="assets/icon-max-normal.svg" alt=""> </li>
+                <li><img class="b-like" src="assets/icon-fav.svg" alt="" /></li>
+                <li>
+                  <img class="b-down" src="assets/icon-download.svg" alt="" />
+                </li>
+                <li>
+                  <img class="b-exp" src="assets/icon-max-normal.svg" alt="" />
+                </li>
               </ul>
             </div>
           </li>
@@ -109,7 +119,7 @@
         <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
       </div>
     </footer>
-    <script src="scripts/darkmode.js"></script>
+    <script type="module" src="scripts/index.js"></script>
     <script src="scripts/search.js"></script>
   </body>
 </html>
