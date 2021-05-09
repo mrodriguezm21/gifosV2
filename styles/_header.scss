@@ -58,38 +58,54 @@ header {
     }
     form {
       margin: 0 auto;
-      width: 90%;
       border-radius: 27px;
       border: solid 1px var(--color-texto);
       padding-left: 10px;
-      height: 50px;
-      display: flex;
-      justify-content: space-between;
-      overflow: hidden;
+      .prueba-input {
+        margin: 0 auto;
+        padding: 10px 0;
+        width: 100%;
+        display: grid;
+        grid-template: "input  boton";
+        grid-template-columns: 9fr 1fr;
 
-      input::placeholder {
-        font-size: 13px;
-        color: $fourth_color;
+        input {
+          grid-area: input;
+        }
+        input::placeholder {
+          font-size: 13px;
+          color: $fourth_color;
+        }
+        input {
+          outline: none;
+          margin-left: 15px;
+          padding-left: 10px;
+          border-radius: 27px;
+          font-size: 13px;
+          background-color: var(--background);
+          color: var(--color-input);
+        }
+        #search-icon {
+          grid-area: boton;
+          background: var(--icono-busqueda) no-repeat;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
       }
-      input {
-        outline: none;
-        align-self: center;
-        height: 50px;
-        width: 300px;
-        margin-left: 15px;
-        padding-left: 10px;
-        border-radius: 27px;
-        font-size: 13px;
-        background-color: var(--background);
-        color: var(--color-input);
-      }
-      #search-icon {
-        align-self: center;
-        background: var(--icono-busqueda) no-repeat;
-        width: 10%;
-        height: 20px;
-        margin-right: 15px;
-        cursor: pointer;
+      .prueba-form {
+        padding: 5px 0;
+        margin: 0 auto;
+        width: 95%;
+        border-top: solid 1px var(--color-texto);
+        display: none;
+        flex-direction: column;
+        span {
+          cursor: pointer;
+          padding: 2px 0;
+          padding-left: 15px;
+          color: var(--color-texto);
+        }
       }
     }
     .results {
