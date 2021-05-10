@@ -287,7 +287,7 @@ header .search form {
   padding-left: 10px;
 }
 
-header .search form .prueba-input {
+header .search form .search-div {
   margin: 0 auto;
   padding: 10px 0;
   width: 100%;
@@ -298,31 +298,31 @@ header .search form .prueba-input {
       grid-template-columns: 9fr 1fr;
 }
 
-header .search form .prueba-input input {
+header .search form .search-div input {
   grid-area: input;
 }
 
-header .search form .prueba-input input::-webkit-input-placeholder {
+header .search form .search-div input::-webkit-input-placeholder {
   font-size: 13px;
   color: #9cafc3;
 }
 
-header .search form .prueba-input input:-ms-input-placeholder {
+header .search form .search-div input:-ms-input-placeholder {
   font-size: 13px;
   color: #9cafc3;
 }
 
-header .search form .prueba-input input::-ms-input-placeholder {
+header .search form .search-div input::-ms-input-placeholder {
   font-size: 13px;
   color: #9cafc3;
 }
 
-header .search form .prueba-input input::placeholder {
+header .search form .search-div input::placeholder {
   font-size: 13px;
   color: #9cafc3;
 }
 
-header .search form .prueba-input input {
+header .search form .search-div input {
   outline: none;
   margin-left: 15px;
   padding-left: 10px;
@@ -332,7 +332,7 @@ header .search form .prueba-input input {
   color: var(--color-input);
 }
 
-header .search form .prueba-input #search-icon {
+header .search form .search-div #search-icon {
   grid-area: boton;
   background: var(--icono-busqueda) no-repeat;
   width: 20px;
@@ -340,7 +340,7 @@ header .search form .prueba-input #search-icon {
   cursor: pointer;
 }
 
-header .search form .prueba-form {
+header .search form .suggestions {
   padding: 5px 0;
   margin: 0 auto;
   width: 95%;
@@ -352,7 +352,7 @@ header .search form .prueba-form {
           flex-direction: column;
 }
 
-header .search form .prueba-form span {
+header .search form .suggestions span {
   cursor: pointer;
   padding: 2px 0;
   padding-left: 15px;
