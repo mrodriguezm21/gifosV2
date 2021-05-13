@@ -17,7 +17,6 @@ async function suggestions() {
   for (let i = 0; i < 5; i++) {
     let show = document.querySelector(`.suggestions .sg-${i}`);
     show.innerHTML = data[i].name;
-    console.log(data[i].name);
   }
 }
 

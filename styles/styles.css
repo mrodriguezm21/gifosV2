@@ -385,7 +385,7 @@ header .search .button-more {
   width: 127px;
   height: 50px;
   cursor: pointer;
-  display: block;
+  display: none;
 }
 
 header .search .button-more:hover {
