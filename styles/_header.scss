@@ -58,6 +58,7 @@ header {
     }
     form {
       margin: 0 auto;
+      width: 90%;
       border-radius: 27px;
       border: solid 1px var(--color-texto);
       padding-left: 10px;
@@ -205,7 +206,8 @@ header {
         font-size: 35px;
       }
       ul {
-        width: 30%;
+        max-width: 500px;
+        width: 60%;
         li {
           img {
             width: 100%;
@@ -213,7 +215,9 @@ header {
         }
       }
       form {
-        width: 35%;
+        max-width: 700px;
+
+        width: 60%;
         input {
           width: 90%;
         }

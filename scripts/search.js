@@ -45,6 +45,9 @@ async function getGifs(gifLen, inputValue) {
       document.getElementsByClassName("trendingS")[0].style.display = "none";
       document.getElementsByClassName("button-more")[0].style.display = "block";
     }
+
+let favBoton = document.getElementsByClassName("b-like")
+console.log(favBoton);
   } catch (error) {
     console.error(error);
   }

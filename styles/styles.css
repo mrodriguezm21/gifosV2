@@ -151,7 +151,7 @@ a {
 }
 
 .gif2 {
-  width: 100%;
+  width: 357px;
   height: 275px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,6 +282,7 @@ header .search ul li img {
 
 header .search form {
   margin: 0 auto;
+  width: 90%;
   border-radius: 27px;
   border: solid 1px var(--color-texto);
   padding-left: 10px;
@@ -467,13 +468,15 @@ header .favs .fav-span {
     font-size: 35px;
   }
   header .search ul {
-    width: 30%;
+    max-width: 500px;
+    width: 60%;
   }
   header .search ul li img {
     width: 100%;
   }
   header .search form {
-    width: 35%;
+    max-width: 700px;
+    width: 60%;
   }
   header .search form input {
     width: 90%;
@@ -567,12 +570,18 @@ header .favs .fav-span {
           justify-content: center;
 }
 
-.main .slider .slide li {
+.main .slider .slide .trendingGifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .slider .slide .trendingGifs li {
   display: inline;
   padding: 0 10px;
 }
 
-.main .slider .slide li img {
+.main .slider .slide .trendingGifs li img {
   width: 100%;
 }
 

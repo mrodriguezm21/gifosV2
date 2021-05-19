@@ -1,15 +1,19 @@
-function favTest() {
-  let elementos = document.querySelectorAll(".prueba-gifs");
-  console.log(elementos);
-}
+let favBoton = document.getElementsByClassName("b-like")
+console.log(favBoton);
+// function favTest() {
+//   let elementos = document.querySelectorAll(".prueba-gifs");
+//   console.log(elementos);
+// }
 
-elementos.forEach((span) => {
-  const input = document.getElementById("searchbox");
+// elementos.forEach((span) => {
+//   const input = document.getElementById("searchbox");
 
-  span.onclick = function () {
-    document.getElementsByTagName("span").value = this.innerHTML;
-    input.value = this.innerHTML;
+//   span.onclick = function () {
+//     document.getElementsByTagName("span").value = this.innerHTML;
+//     input.value = this.innerHTML;
 
-    console.log(this.innerHTML);
-  };
-});
+//     console.log(this.innerHTML);
+//   };
+// });
+
+// let
