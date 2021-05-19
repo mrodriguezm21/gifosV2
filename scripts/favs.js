@@ -1,5 +1,14 @@
+let favSection = document.getElementsByClassName("favs")[0];
+let favContainer = document.getElementsByClassName("favsContainer")[0];
 let favBoton = document.getElementsByClassName("b-like")
-console.log(favBoton);
+
+
+let quantityFavs = document.getElementsByClassName("gifInFav");
+if (quantityFavs == 0 || quantityFavs.length == 0) {
+}else{
+    favContainer.innerHTML = spanprueba;
+}
+
 // function favTest() {
 //   let elementos = document.querySelectorAll(".prueba-gifs");
 //   console.log(elementos);

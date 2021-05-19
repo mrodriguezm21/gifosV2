@@ -418,6 +418,30 @@ header .favs .fav-span {
   font-weight: 500;
 }
 
+header .favsContainer {
+  margin: 40px 0;
+}
+
+header .favsContainer li {
+  margin: 15px auto;
+  width: 150px;
+  height: 151px;
+  list-style-type: none;
+}
+
+header .favsContainer li img {
+  width: 100%;
+}
+
+header .favsContainer span {
+  max-width: 400px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  color: #50e3c2;
+}
+
 @media screen and (min-width: 768px) {
   header .head {
     margin: 1% 5% 5%;
