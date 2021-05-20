@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="cam_content">
-        <video class="cam" id="video" src="../scripts/media.js" onclick="play()"></video>
+        <video class="cam" id="srcVideo"></video>
       </div>
       <div><img class="rail" src="../assets/pelicula.svg" alt="rollo de pelicula"></div>
     </div>
@@ -59,15 +59,17 @@
         <div class="line"></div>
       </div>
     </div>
-
+    <button id="videoButton">GRABAR</button>
+    <button id="stopedButton">stop</button>
     </div>
-    <input class="boton" type="button" src="../scripts/media.js" onclick="getStreamAndRecord()">
+    
   </main>
-
   <script src="../scripts/darkmode.js"></script>
   <!--modo oscuro-->
   <script src="../scripts/media.js"></script>
   <!--camara-->
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <!--crear gif-->
 </body>
 
 
