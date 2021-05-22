@@ -1,69 +1,74 @@
-window.onload = showTrending;
-
 const btnSearch = document.getElementById("search-icon");
 const searchTerm = document.getElementById("searchbox");
 const toReplace = document.getElementsByClassName("text1")[0];
-const trendText = document.getElementById("trending-searches");
 
-
-let test = 8;
-
+// Eventos
 btnSearch.addEventListener("click", () => {
-  test = 8;
-  showGifs();
+  test = 9;
+  getGifs();
 });
 
+searchTerm.addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+    test = 9;
+    event.preventDefault();
+    getGifs();
+  }
+});
 
-async function trendingText() {
-  let url = `https://api.giphy.com/v1/trending/searches?&limit=5&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
-  const resp = await fetch(url);
-  const json = await resp.json();
-  const data = await json.data;
-  return data;
-}
-function showTrending() {
-  let data = trendingText();
-  let salida = [];
-  data
-    .then((response) => {
-      for (let i = 0; i < 5; i++) {
-        salida += response[i];
-        if (i < 4) {
-          salida += ", ";
-        }
-      }
-      trendText.innerHTML = salida;
-      trendText.style.textTransform = "capitalize";
-    })
-    .catch((err) => console.error(err));
+// Llamado a la api de giphy search
+async function getGifs(gifLen, inputValue) {
+  try {
+    gifLen = Gifs();
+    inputValue = searchTerm.value;
+
+    let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=${gifLen}&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
+    const resp = await fetch(url);
+    const json = await resp.json();
+    const data = await json.data;
+    let salida = "";
+    data.forEach((e) => {
+      salida += ` <div class="gif">
+        <img src="${e.images.fixed_width.url}"  class="cuadrogip"/>
+        <ul class="prueba-gifs">
+          <li><img class="b-like" src="assets/icon-fav.svg"  onClick="favTest()" /></li>
+          <li><img class="b-down" src="assets/icon-download.svg" /></li>
+          <li><img class="b-exp" src="assets/icon-max-normal.svg" /></li>
+        </ul>
+      </div>`;
+    });
+    if (salida.length <= 0) {
+      document.getElementsByClassName("results")[0].innerHTML =
+        "No se encontró ningún gif :(";
+    } else {
+      document.getElementsByClassName("results")[0].innerHTML = salida;
+      document.getElementsByClassName("trendingS")[0].style.display = "none";
+      document.getElementsByClassName("button-more")[0].style.display = "block";
+    }
+
+let favBoton = document.getElementsByClassName("b-like")
+console.log(favBoton);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-async function getGifs(gifLen) {
-  let inputValue = searchTerm.value;
-  let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=${gifLen}&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
-  const resp = await fetch(url);
-  const json = await resp.json();
-  const data = await json.data;
-  return data;
-}
-function showGifs() {
-  let data = getGifs(Gifs());
-  let salida = "";
-  data
-    .then((response) => {
-      response.forEach((ImageData) => {
-        salida += `<img src="${ImageData.images.fixed_width.url}" class="cuadrogip"/>`;
-      });
-      if (salida.length <= 0) {
-        document.getElementsByClassName("results")[0].innerHTML =
-          "No se encontró ningún gif :(";
-      } else {
-        document.getElementsByClassName("results")[0].innerHTML = salida;
-      }
-    })
-    .catch((err) => console.error(err));
-}
+//Funcionalidad de boton ver mas
 function Gifs() {
-  test = test + 4;
-  return test
+  test = test + 3;
+  return test;
 }
+
+//Obtener lista de gifs
+async function favTest() {
+  try {
+    let elementos = document.querySelectorAll(".cuadrogip");
+    for (let i = 0; i < elementos.length; i++) {
+      const element = elementos[i].attributes.src.value;
+      console.log(element);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
