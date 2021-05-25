@@ -584,11 +584,14 @@ header .favsContainer span {
   line-height: 25px;
 }
 
+.main .slider {
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .main .slider .slide {
   margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -601,7 +604,6 @@ header .favsContainer span {
 }
 
 .main .slider .slide .trendingGifs li {
-  display: inline;
   padding: 0 10px;
 }
 
@@ -706,7 +708,13 @@ header .favsContainer span {
     max-width: unset;
   }
   .main .slider {
+    max-width: unset;
     display: block;
+  }
+  .main .slider .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .main .slider ul {
     -ms-flex-item-align: center;
