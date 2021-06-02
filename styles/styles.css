@@ -213,28 +213,36 @@ header {
 }
 
 header .head {
-  margin: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-header .head .logo {
+header .head .head-mobile {
+  padding: 5% 5% 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .head .head-mobile .logo {
   background: var(--logo-mobile) no-repeat;
   width: 56px;
   height: 49px;
 }
 
-header .head .burger-responsive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .head .burger-responsive .burger {
+header .head .head-mobile .burger {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -243,12 +251,54 @@ header .head .burger-responsive .burger {
   height: 14px;
 }
 
-header .head .burger-responsive ul {
+header .head .burger-responsive {
   display: none;
+}
+
+header .head .burger-responsive li:hover {
+  border-bottom: solid 2px #50e3c2;
+}
+
+header .head .burger-responsive li:active {
+  color: #9cafc3;
+  border-bottom: unset;
 }
 
 header .head .burger-responsive #btn-add {
   display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .head .is-active {
+  display: block;
+}
+
+header .head .is-active ul {
+  background: var(--color-linea);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  height: 100vh;
+}
+
+header .head .is-active ul li {
+  color: #fff;
+  padding: 20px 0 15px;
+  border-bottom: solid 2px #9cafc3;
+}
+
+header .search {
+  margin-top: 20px;
 }
 
 header .search h1 {
@@ -448,14 +498,27 @@ header .favsContainer span {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .head .head-mobile {
+    padding: unset;
   }
   header .head .logo {
     background: var(--logo) no-repeat;
     width: 68px;
     height: 60px;
   }
+  header .head .burger {
+    display: none;
+  }
   header .head .burger-responsive {
-    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
