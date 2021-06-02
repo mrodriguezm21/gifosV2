@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <a href="../index.html">
+          <div class="logo"></div>
+        </a>
+        <div class="burger-responsive">
+          <div class="burger"></div>
+          <ul>
+            <li><span id="btndarkmode">MODO NOCTURNO</span></li>
+            <li><a href="">FAVORITOS</a></li>
+            <li><a href="">MIS GIFOS</a></li>
+          </ul>
+          <a href="pages/webcam.html"><div id="btn-add"></div> </a>
+        </div>
+      </div>
+      <div class="favs">
+        <div>
+          <img src="../assets/icon-favoritos.svg" alt="" />
+          <span class="fav-span">Favoritos</span>
+        </div>
+        <div class="fav-gifs"></div>
+      </div>
+      <div class="favsContainer" id="favsContainer">
+        <li>
+          <img src="assets/icon-fav-sin-contenido.svg" alt="" />
+        </li>
+        <span
+          >"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</span
+        >
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-text1">
+        <h2>Trending GIFOS</h2>
+        <span>Mira los últimos GIFOS de nuestra comunidad.</span>
+      </div>
+      <div class="slider">
+        <ul class="slide">
+          <div type="button" id="btn-left"></div>
+          <div class="trendingGifs"></div>
+          <div type="button" id="btn-right"></div>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div class="foot">
+        <div class="footer-divider">
+          <span>Compartir en:</span>
+          <ul>
+            <li>
+              <a href=""><img src="../assets/icon_facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="../assets/icon-twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="../assets/icon_instagram.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
+      </div>
+    </footer>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/slider.js"></script>
+    <script src="../scripts/showfav.js"></script>
+    <!-- <script src="../scripts/"></script>
+    <script src="../scripts/"></script> -->
+  </body>
+</html>
