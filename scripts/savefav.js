@@ -1,5 +1,9 @@
 let Favlist = []
-Favlist = localStorage.getItem('favoritos').split(",")
+if(Favlist == 0 || Favlist.length == 0){
+}
+else{
+    Favlist = localStorage.getItem('favoritos').split(",")
+}
 
 function addgif(elemento) {
     console.log(elemento)
