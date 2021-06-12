@@ -15,7 +15,7 @@ async function trendGifs() {
         <div class="gif2">
             <img src="${ImageData.images.fixed_width.url}" alt="" />
             <ul class="prueba-gifs">
-            <li><img class="b-like" src="assets/icon-fav.svg" alt="" /></li>
+            <li><img class="b-like" src="assets/icon-fav.svg" id="${ImageData.id}" onclick="addgif('${ImageData.id}')"/></li>
             <li>
                 <img class="b-down" src="assets/icon-download.svg" alt="" />
             </li>

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favoritos</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <header>
       <div class="head">
-        <a href="../index.html">
+        <a href="./index.html">
           <div class="logo"></div>
         </a>
         <div class="burger-responsive">
@@ -25,16 +25,18 @@
       </div>
       <div class="favs">
         <div>
-          <img src="../assets/icon-favoritos.svg" alt="" />
+          <img src="./assets/icon-favoritos.svg" alt="" />
           <span class="fav-span">Favoritos</span>
         </div>
         <div class="fav-gifs"></div>
       </div>
-      <div class="favsContainer">
-        <li>
-          <img src="assets/icon-fav-sin-contenido.svg" alt="" />
-        </li>
-        <span
+      <div class="favsContainer" id="favsContainer">
+        <ul class="is-empty">
+          <li>
+            <img src="assets/icon-fav-sin-contenido.svg" alt="" />
+          </li>
+        </ul>
+        <span class="is-empty"
           >"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</span
         >
       </div>
@@ -52,29 +54,28 @@
         </ul>
       </div>
     </main>
-
     <footer>
       <div class="foot">
         <div class="footer-divider">
           <span>Compartir en:</span>
           <ul>
             <li>
-              <a href=""><img src="../assets/icon_facebook.svg" alt="" /></a>
+              <a href=""><img src="./assets/icon_facebook.svg" alt="" /></a>
             </li>
             <li>
-              <a href=""><img src="../assets/icon-twitter.svg" alt="" /></a>
+              <a href=""><img src="./assets/icon-twitter.svg" alt="" /></a>
             </li>
             <li>
-              <a href=""><img src="../assets/icon_instagram.svg" alt="" /></a>
+              <a href=""><img src="./assets/icon_instagram.svg" alt="" /></a>
             </li>
           </ul>
         </div>
         <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
       </div>
     </footer>
-    <script src="../scripts/darkmode.js"></script>
-    <script src="../scripts/slider.js"></script>
-    <script src="../scripts/favs.js"></script>
+    <script src="./scripts/darkmode.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/showfav.js"></script>
     <!-- <script src="../scripts/"></script>
     <script src="../scripts/"></script> -->
   </body>
