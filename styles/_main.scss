@@ -13,14 +13,15 @@
     }
   }
   .slider {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
     .slide {
       margin: 50px 0;
-      display: flex;
       justify-content: center;
       .trendingGifs {
         display: flex;
         li {
-          display: inline;
           padding: 0 10px;
           img {
             width: 100%;
@@ -93,7 +94,12 @@
       }
     }
     .slider {
+      max-width: unset;
+
       display: block;
+      .slide{
+        display: flex;
+      }
       ul {
         align-self: center;
         width: 100%;

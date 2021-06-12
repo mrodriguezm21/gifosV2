@@ -6,34 +6,62 @@ header {
 
   .head {
     // Comienzo de clase "head"
-    margin: 5%;
     display: flex;
     justify-content: space-between;
-
-    .logo {
-      background: var(--logo-mobile) no-repeat;
-      width: 56px;
-      height: 49px;
-    }
-
-    .burger-responsive {
+    flex-direction: column;
+    .head-mobile {
+      padding: 5% 5% 0%;
       display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .logo {
+        background: var(--logo-mobile) no-repeat;
+        width: 56px;
+        height: 49px;
+      }
+
       .burger {
         align-self: center;
         background: var(--menu-hamburguesa) no-repeat;
         width: 15px;
         height: 14px;
       }
-      ul {
-        display: none;
+    }
+    .burger-responsive {
+      li:hover {
+        border-bottom: solid 2px $sec_color;
+
       }
+      li:active{
+        color: $fourth_color;
+        border-bottom: unset;
+      }
+      display: none;
       #btn-add {
         display: none;
+        align-self: center;
+      }
+    }
+    .is-active {
+      display: block;
+      ul {
+        background: var(--color-linea);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        height: 100vh;
+        li {          
+          color: $dfourth_color;
+          padding: 20px 0 15px;
+          border-bottom: solid 2px $fourth_color;
+        }
       }
     }
     // Final de clase "head"
   }
   .search {
+    margin-top: 20px;
     h1 {
       font-size: 30px;
       margin: 0 auto;
@@ -158,6 +186,7 @@ header {
     }
   }
   .favsContainer {
+
     padding: 50px;
       color: var(--color-texto);
       max-width: 1400px;
@@ -190,14 +219,24 @@ header {
     .head {
       margin: 1% 5% 5%;
       justify-content: space-between;
+      flex-direction: row;
+
+      .head-mobile{
+      padding: unset;
+
+      }
 
       .logo {
         background: var(--logo) no-repeat;
         width: 68px;
         height: 60px;
       }
+      .burger {
+        display: none;
+      }
       .burger-responsive {
-        width: 50%;
+        display: flex;
+        width: 70%;
         justify-content: space-evenly;
         .burger {
           display: none;

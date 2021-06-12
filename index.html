@@ -18,16 +18,18 @@
   <body>
     <header>
       <div class="head">
-        <div class="logo"></div>
-        <div class="burger-responsive">
-          <div class="burger"></div>
-          <ul>
+        <div class="head-mobile">
+          <div class="logo"></div>
+          <div class="burger" id="burger"></div>
+        </div>
+        <nav class="burger-responsive" id="burger-responsive">
+          <ul id="list-head">
             <li><span id="btndarkmode">MODO NOCTURNO</span></li>
             <li><a href="favorites.html">FAVORITOS</a></li>
             <li><a href="">MIS GIFOS</a></li>
           </ul>
-          <a href="pages/webcam.html"><div id="btn-add"></div></a>
-        </div>
+          <div id="btn-add"></div><a href="pages/webcam.html"></a></div>
+        </nav>
       </div>
 
       <div class="search">
@@ -40,11 +42,10 @@
           <li><img src="assets/ilustra_header.svg" alt="" /></li>
         </ul>
 
-        <form action="" onsubmit="return false;">
+        <form onsubmit="return false;">
           <div class="search-div">
             <input
               type="text"
-              name=""
               id="searchbox"
               placeholder="Busca GIFOS y más"
               autocomplete="off"
@@ -104,9 +105,13 @@
         <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
       </div>
     </footer>
-    <script type="module" src="scripts/index.js"></script>
+    <script src="scripts/darkmode.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/suggestions.js"></script>
+    <script src="scripts/trending.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/menu.js"></script>
     <script src="scripts/savefav.js"></script>
+
   </body>
 </html>

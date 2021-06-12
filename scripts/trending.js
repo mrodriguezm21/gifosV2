@@ -1,6 +1,7 @@
-window.onload = trendingText;
+const onload = new Promise(window.onload = trendingText);
+
+// window.onload = trendingText;
 const trendText = document.getElementById("trending-searches");
-import "./search.js";
 
 async function trendingText() {
   try {
