@@ -1,11 +1,6 @@
 let Favlist = []
-if(Favlist == 0 || Favlist.length == 0){
-}
-else{
-    Favlist = localStorage.getItem('favoritos').split(",")
-}
-
 function addgif(elemento) {
+    Favlist = localStorage.getItem('favoritos').split(",")
     console.log(elemento)
     if (!elemento) return console.log('el gif no existe')
     // 
