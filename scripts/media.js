@@ -49,12 +49,11 @@ async function uploadGif(gifData) {
       const res = await fetch("https://upload.giphy.com/v1/gifs?api_key=dNkeI6zowJCt3piQ2sJ0ZOfdsiewNf1Q", {
          method: "post",
          body: form, 
-         mode: "no-cors",
          redirect: "follow",
       })
       if(localStorage.getItem("mygif")) myGifs = localStorage.getItem("mygif").split(",")
-      myGifs.push(res.response_id)
-      console.log(res)
+      myGifs.push((res.json()).data.info)
+      console.log((res.json()).data.info)
       localStorage.setItem('mygif',myGifs)
    } catch(error) {
       console.log(error)
