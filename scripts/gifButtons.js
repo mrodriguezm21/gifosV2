@@ -1,4 +1,6 @@
 let Favlist = []
+
+// agregar a favoritos
 function addgif(elemento) {
     Favlist = localStorage.getItem('favoritos').split(",")
     console.log(elemento)
@@ -9,4 +11,17 @@ function addgif(elemento) {
     //
     Favlist.push(elemento)
     localStorage.setItem('favoritos',Favlist)
+}
+
+// descargar gifs
+async function downloadGift(gif) {
+    const URLgif = await fetch(gif);
+    const gifBlob = await URLgif.blob();
+    const gifDownload = URL.createObjectURL(gifBlob);
+    let a = document.createElement("a");
+    a.download = `giphy_ib_${gif}`;
+    a.target = "_blank";
+    a.href = gifDownload;
+    a.click();
+    
 }

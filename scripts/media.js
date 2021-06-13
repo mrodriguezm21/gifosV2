@@ -5,6 +5,8 @@ const stopedButton = document.getElementById("stopedButton")
 
 let form = new FormData();
 
+let myGifs = []
+
 // Funcion grabar, detener y descargar Gif
 function getStreamAndRecord() {
    // Propiedades del gif
@@ -46,13 +48,13 @@ async function uploadGif(gifData) {
       form.append('file', gifData, 'myGif.gif');
       const res = await fetch("https://upload.giphy.com/v1/gifs?api_key=dNkeI6zowJCt3piQ2sJ0ZOfdsiewNf1Q", {
          method: "post",
-         body: form,
-         mode: "no-cors",
+         body: form, 
          redirect: "follow",
       })
-      // const json = await res.json()
-      console.log(res)
-      console.log(typeof(res))
+      if(localStorage.getItem("mygif")) myGifs = localStorage.getItem("mygif").split(",")
+      myGifs.push((res.json()).data.info)
+      console.log((res.json()).data.info)
+      localStorage.setItem('mygif',myGifs)
    } catch(error) {
       console.log(error)
    }
