@@ -17,7 +17,7 @@ async function trendGifs() {
             <ul class="prueba-gifs">
             <li><img class="b-like" src="assets/icon-fav.svg" id="${ImageData.id}" onclick="addgif('${ImageData.id}')"/></li>
             <li>
-                <img class="b-down" src="assets/icon-download.svg" alt="" />
+            <img class="b-down" src="assets/icon-download.svg" onclick=downloadGift('${ImageData.images.original.url}') />
             </li>
             <li>
                 <img class="b-exp" src="assets/icon-max-normal.svg" alt="" />
