@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
+    <title>Crear GIFOS</title>
+    <script
+      src="https://kit.fontawesome.com/ba4c12eac5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
-  <title> Crear GIFOS</title>
-  <script src="https://kit.fontawesome.com/ba4c12eac5.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../styles/styles.css">
-</head>
-
-<body lang="en">
-  <header>
-    <div class="head">
-      <a href="../index.html">
-        <div class="logo"></div>
-      </a>
-      <div class="burger-responsive">
-        <div class="burger"></div>
-        <ul>
-          <li> <span id="btndarkmode">MODO NOCTURNO</span></li>
-          <li><a href="">FAVORITOS</a></li>
-          <li><a href="">MIS GIFOS</a></li>
-        </ul>
-        <a href="pages/webcam.html">
-          <div id="btn-add"></div>
-        
-        </a>
+  <body lang="en">
+    <header>
+      <div class="head">
+        <div class="head-mobile">
+          <a class="logo" href="../index.html"></a>
+          <div class="burger" id="burger"></div>
+        </div>
+        <nav class="burger-responsive" id="burger-responsive">
+          <ul id="list-head">
+            <li><span id="btndarkmode">MODO NOCTURNO</span></li>
+            <li><a href="favorites.html">FAVORITOS</a></li>
+            <li><a href="">MIS GIFOS</a></li>
+          </ul>
+          <a href="pages/webcam.html"><div id="btn-add"></div></a>
+        </nav>
       </div>
-    </div>
-  </header>
-  <main class="create">
-    <div class="cam_flex">
-      <div class="move1">
-        <div>
-          <img src="../assets/camara.svg" alt="camara de pelicula">
-          <img src="../assets/element-luz-camara.svg" alt="luz proviniente del lente de la camara">
+    </header>
+    <main class="create">
+      <div class="cam_flex">
+        <div class="move1">
+          <div id="camara"></div>
+          <div id="camara-luz"></div>
+        </div>
+        <div class="cam_content">
+          <video class="cam" id="srcVideo"></video>
         </div>
       </div>
-      <div class="cam_content">
-        <video class="cam" id="srcVideo"></video>
+      <div class="center">
+        <div class="pasos">1</div>
+        <div class="pasos">2</div>
+        <div class="pasos">3</div>
       </div>
-      <div><img class="rail" src="../assets/pelicula.svg" alt="rollo de pelicula"></div>
-    </div>
-    <div class="center">
-      <div class="pasos">
-        <div>
-          <img src="/assets/paso-a-paso.svg" alt="paso 1">
-          <img src="/assets/paso-a-paso.svg" alt="paso 2">
-          <img src="/assets/paso-a-paso.svg" alt="paso 3">
-        </div>
-      </div>
-      <div>
+      <div class="movie-line">
+        <div id="pelicula"></div>
         <div class="line"></div>
       </div>
-    </div>
-    <button id="videoButton">GRABAR</button>
-    <button id="stopedButton">stop</button>
-    </div>
-    
-  </main>
-  <script src="../scripts/darkmode.js"></script>
-  <!--modo oscuro-->
-  <script src="../scripts/media.js"></script>
-  <!--camara-->
-  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-  <!--crear gif-->
-</body>
-
-
+      <button id="videoButton" class="button">GRABAR</button>
+      
+      <button id="stopedButton">stop</button>
+    </main>
+    <footer>
+      <div class="foot">
+        <div class="footer-divider">
+          <span>Compartir en:</span>
+          <ul>
+            <li>
+              <a href=""><img src="../assets/icon_facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="../assets/icon-twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="../assets/icon_instagram.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+        <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
+      </div>
+    </footer>
+    <script src="../scripts/darkmode.js"></script>
+    <!--modo oscuro-->
+    <script src="../scripts/media.js"></script>
+    <!--camara-->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <!--crear gif-->
+  </body>
 </html>
