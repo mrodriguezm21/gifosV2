@@ -40,9 +40,10 @@ function getStreamAndRecord() {
          stopButton.addEventListener("click", () => {
             recorder.stopRecording(async function() {
                await uploadGif(recorder.getBlob())
-               buttonContent.innerText = `<button class="button" id="videoButton">GRABAR</button>`
-               videoButton = document.getElementById("videoButton");
+               
             });
+            buttonContent.innerHTML = `<button class="button" id="videoButton">GRABAR</button>`
+            videoButton = document.getElementById("videoButton");
          })
       })
 }
