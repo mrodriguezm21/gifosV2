@@ -1,8 +1,11 @@
 const btnSearch = document.getElementById("search-icon");
 const searchTerm = document.getElementById("searchbox");
 const toReplace = document.getElementsByClassName("text1")[0];
-
+const onload = new Promise(window.onload = trendingText);
+// window.onload = trendingText;
+const trendText = document.getElementById("trending-searches");
 let cont = 0
+
 
 // Eventos
 btnSearch.addEventListener("click", () => {
@@ -19,11 +22,12 @@ searchTerm.addEventListener("keyup", function (event) {
 });
 
 // Llamado a la api de giphy search
-async function getGifs(gifLen, inputValue) {
+async function getGifs(inputValue) {
   try {
+    if(inputValue == undefined){
+      inputValue = searchTerm.value;
+    }
     gifLen = Gifs();
-    inputValue = searchTerm.value;
-
     let url = `https://api.giphy.com/v1/gifs/search?&q=${inputValue}&limit=${gifLen}&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
     const resp = await fetch(url);
     const json = await resp.json();
@@ -73,6 +77,35 @@ async function favTest() {
     }
   } catch (error) {
     console.error(error);
+  }
+}
+
+function trendGif(inputData) {
+  test = 9;
+  searchTerm.value = inputData
+  getGifs(inputData);
+}
+
+// trending text
+async function trendingText() {
+  try {
+    let url = `https://api.giphy.com/v1/trending/searches?&limit=5&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
+    const resp = await fetch(url);
+    const json = await resp.json();
+    const data = await json.data;
+    let salida = [];
+    for (let i = 0; i < 5; i++) {
+      salida += `<a id="${i}" onclick="trendGif('${data[i]}')"> ${data[i]} </a>`;
+      if (i < 4) {
+        salida += ", ";
+      }
+    }
+    trendText.innerHTML = salida;
+    trendText.style.textTransform = "capitalize";
+    
+  } catch (error) {
+    console.error(error);
+    
   }
 }
 
