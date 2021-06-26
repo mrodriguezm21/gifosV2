@@ -3,7 +3,6 @@ async function suggestions() {
   const sug = document.querySelector(`#suggestions`);
 
   if (input == null || input.length < 2) {
-    console.log("nada bro");
     sug.style.display = "none";
     return false;
   }
@@ -27,7 +26,5 @@ elementos.forEach((span) => {
   span.onclick = function () {
     document.getElementsByTagName("span").value = this.innerHTML;
     input.value = this.innerHTML;
-
-    console.log(this.innerHTML);
   };
 });
