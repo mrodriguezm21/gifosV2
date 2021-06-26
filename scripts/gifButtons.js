@@ -2,13 +2,12 @@ let Favlist = []
 const popContainer = document.getElementById(`popContainer`)
 // agregar a favoritos
 function addgif(elemento) {
-    Favlist = localStorage.getItem('favoritos').split(",")
-    console.log(elemento)
+    try {
+        Favlist = localStorage.getItem('favoritos').split(",")
+    } catch (error) {}
     if (!elemento) return console.log('el gif no existe')
-    // 
     const favorito = Favlist.find(element => element == elemento )
     if (favorito) return console.log('el elemento ya esta agregado')
-    //
     Favlist.push(elemento)
     localStorage.setItem('favoritos',Favlist)
 }
