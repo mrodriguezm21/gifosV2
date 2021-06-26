@@ -11,7 +11,7 @@ btnSearch.addEventListener("click", () => {
   test = 9;
   getGifs();
 });
-
+ 
 searchTerm.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     test = 9;
