@@ -78,7 +78,7 @@ async function trendingText() {
     const data = await json.data;
     let salida = [];
     for (let i = 0; i < 5; i++) {
-      salida += `<a id="${i}" onclick="trendGif('${data[i]}')"> ${data[i]} </a>`;
+      salida += `<a id="${i}" class="cursor" onclick="trendGif('${data[i]}')"> ${data[i]} </a>`;
       if (i < 4) {
         salida += ", ";
       }

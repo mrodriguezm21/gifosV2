@@ -30,7 +30,7 @@ async function gifExpand(gif) {
     const img = await fetch(`https://api.giphy.com/v1/gifs/${gif}?api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`)
     const imgGif = await img.json()
     const imgUrl = imgGif.data.images.original.url
-    popContainer.innerHTML = `<div class="popContainer popContainer_flex" onclick=closeGif()><img src="${imgUrl}"></div></div>`
+    popContainer.innerHTML = `<div class="popContainer" onclick=closeGif()><img src="${imgUrl}"></div>`
 }
 
 //Close gif
