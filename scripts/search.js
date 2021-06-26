@@ -20,6 +20,12 @@ searchTerm.addEventListener("keyup", function (event) {
   }
 });
 
+function trendGif(inputData) {
+  test = 9;
+  searchTerm.value = inputData
+  getGifs(inputData);
+}
+
 // Llamado a la api de giphy search
 async function getGifs(inputValue) {
   try {
@@ -36,9 +42,9 @@ async function getGifs(inputValue) {
       salida += ` <div class="gif">
         <img src="${e.images.fixed_width.url}"  class="cuadrogip"/>
         <ul class="prueba-gifs">
-          <li><img class="b-like" src="assets/icon-fav.svg" onclick="addgif('${e.id}')"/></li>
+          <li><img class="b-like" src="assets/icon-fav.svg" onclick=addgif('${e.id}')/></li>
           <li><img class="b-down" src="assets/icon-download.svg" onclick=downloadGift('${e.images.original.url}') /></li>
-          <li><img class="b-exp" src="assets/icon-max-normal.svg" /></li>
+          <li><img class="b-exp" src="assets/icon-max-normal.svg" onclick=gifExpand('${e.id}') /></li>
         </ul>
       </div>`;
       cont = cont + 1
@@ -61,12 +67,6 @@ function Gifs() {
   test = test + 3;
   cont = 0
   return test;
-}
-
-function trendGif(inputData) {
-  test = 9;
-  searchTerm.value = inputData
-  getGifs(inputData);
 }
 
 // trending text
