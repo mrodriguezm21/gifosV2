@@ -70,7 +70,6 @@ function getStreamAndRecord() {
 async function uploadGif(gifData) {
    const formData = new FormData();
    formData.append("file", gifData);
-
    const request = await fetch("https://upload.giphy.com/v1/gifs?api_key=dNkeI6zowJCt3piQ2sJ0ZOfdsiewNf1Q", {
        method: "POST",
        body: formData,
