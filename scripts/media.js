@@ -33,9 +33,9 @@ function getStreamAndRecord() {
             },
          });
          // Inicio de la grabacion
-         recorder.startRecording()
-         buttonContent.innerText = `<button class="button" id="stopButton">stop</button>`
+         buttonContent.innerHTML = `<button class="button" id="stopButton">stop</button>`
          const stopButton = document.getElementById("stopButton")
+         recorder.startRecording()
          // Fin de la grabacion
          stopButton.addEventListener("click", () => {
             recorder.stopRecording(async function() {
