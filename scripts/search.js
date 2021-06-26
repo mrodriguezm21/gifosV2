@@ -6,7 +6,6 @@ const onload = new Promise(window.onload = trendingText);
 const trendText = document.getElementById("trending-searches");
 let cont = 0
 
-
 // Eventos
 btnSearch.addEventListener("click", () => {
   test = 9;
@@ -52,9 +51,6 @@ async function getGifs(inputValue) {
       document.getElementsByClassName("trendingS")[0].style.display = "none";
       document.getElementsByClassName("button-more")[0].style.display = "block";
     }
-
-let favBoton = document.getElementsByClassName("b-like")
-console.log(favBoton);
   } catch (error) {
     console.error(error);
   }
@@ -65,19 +61,6 @@ function Gifs() {
   test = test + 3;
   cont = 0
   return test;
-}
-
-//Obtener lista de gifs
-async function favTest() {
-  try {
-    let elementos = document.querySelectorAll(".cuadrogip");
-    for (let i = 0; i < elementos.length; i++) {
-      const element = elementos[i].attributes.src.value;
-      console.log(element);
-    }
-  } catch (error) {
-    console.error(error);
-  }
 }
 
 function trendGif(inputData) {
