@@ -42,9 +42,9 @@ async function getGifs(inputValue) {
       salida += ` <div class="gif">
         <img src="${e.images.fixed_width.url}"  class="cuadrogip"/>
         <ul class="prueba-gifs">
-          <li><img class="b-like" src="assets/icon-fav.svg" onclick=addgif('${e.id}')/></li>
-          <li><img class="b-down" src="assets/icon-download.svg" onclick=downloadGift('${e.images.original.url}') /></li>
-          <li><img class="b-exp" src="assets/icon-max-normal.svg" onclick=gifExpand('${e.id}') /></li>
+          <li><img class="b-like" src="assets/icon-fav.svg" onclick="addgif('${e.id}')"/></li>
+          <li><img class="b-down" src="assets/icon-download.svg" onclick="downloadGift('${e.images.original.url}')" /></li>
+          <li><img class="b-exp" src="assets/icon-max-normal.svg" onclick="gifExpand('${e.id}')" /></li>
         </ul>
       </div>`;
       cont = cont + 1
@@ -78,7 +78,7 @@ async function trendingText() {
     const data = await json.data;
     let salida = [];
     for (let i = 0; i < 5; i++) {
-      salida += `<a id="${i}" onclick="trendGif('${data[i]}')"> ${data[i]} </a>`;
+      salida += `<a id="${i}" class="cursor" onclick="trendGif('${data[i]}')"> ${data[i]} </a>`;
       if (i < 4) {
         salida += ", ";
       }
