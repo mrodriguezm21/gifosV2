@@ -1,7 +1,6 @@
 // objetos del html
 const srcVideo = document.getElementById("srcVideo");
 const videoButton = document.getElementById("videoButton");
-const stopedButton = document.getElementById("stopedButton")
 
 let form = new FormData();
 
@@ -34,8 +33,9 @@ function getStreamAndRecord() {
          });
          // Inicio de la grabacion
          recorder.startRecording()
+         srcVideo.innerText = stop
          // Fin de la grabacion
-         stopedButton.addEventListener("click", () => {
+         videoButton.addEventListener("click", () => {
             recorder.stopRecording(async function() {
                await uploadGif(recorder.getBlob())
             });
