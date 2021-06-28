@@ -115,14 +115,14 @@ a {
 .gif .prueba-gifs li .b-down,
 .gif .prueba-gifs li .b-exp {
   position: absolute;
-  right: -155px;
+  right: -110px;
   width: 32px;
   height: 32px;
   opacity: 1;
 }
 
 .gif .prueba-gifs li .b-like {
-  right: -75px;
+  right: -30px;
 }
 
 .gif .prueba-gifs li .b-like:hover {
@@ -131,7 +131,7 @@ a {
 }
 
 .gif .prueba-gifs li .b-down {
-  right: -115px;
+  right: -70px;
 }
 
 .gif .prueba-gifs li .b-down:hover {
@@ -157,7 +157,7 @@ a {
 }
 
 .gif2 {
-  width: 357px;
+  width: 340px;
   height: 275px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,6 +209,35 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .gif {
+    width: 357px;
+  }
+  .gif .prueba-gifs li .b-like,
+  .gif .prueba-gifs li .b-down,
+  .gif .prueba-gifs li .b-exp {
+    position: absolute;
+    right: -155px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+  }
+  .gif .prueba-gifs li .b-like {
+    right: -75px;
+  }
+  .gif .prueba-gifs li .b-down {
+    right: -115px;
+  }
+  .gif2 {
+    width: 357px;
+  }
+  .gif2 li .b-like,
+  .gif2 li .b-down,
+  .gif2 li .b-exp {
+    position: unset;
+  }
 }
 
 header {
@@ -417,7 +446,7 @@ header .search form .suggestions span {
 }
 
 header .search .results {
-  padding: 50px;
+  padding: 20px;
   color: var(--color-texto);
   max-width: 1400px;
   display: -webkit-box;
@@ -589,6 +618,9 @@ header .favsContainer span {
   }
   header .search form #search-icon {
     width: 5%;
+  }
+  header .search .results {
+    padding: 50px;
   }
   header .search .text1 span {
     max-width: unset;
