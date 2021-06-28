@@ -49,6 +49,7 @@ function getStreamAndRecord() {
 }
 
 
+
 async function uploadGif(gifData) {
    const formData = new FormData();
    formData.append("file", gifData);
@@ -60,7 +61,7 @@ async function uploadGif(gifData) {
    localStorage.setItem("myGifs",data.data.id);
    console.log(localStorage.getItem("myGifs"));
 
-}
+
 
 
 videoButton.addEventListener("click", (event) => {
