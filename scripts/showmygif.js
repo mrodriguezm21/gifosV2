@@ -1,5 +1,5 @@
 try {
-    const mygif = localStorage.getItem("mygif").split(",");
+    const mygif = localStorage.getItem("myGifs").split(",");
     const gifsContainer = document.getElementById("gifsContainer");
     const empty = document.getElementsByClassName("is-empty");
     

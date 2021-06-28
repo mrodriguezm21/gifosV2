@@ -48,24 +48,7 @@ function getStreamAndRecord() {
       })
 }
 
-// async function uploadGif(gifData) {
-//    try {
-//       form.append('file', gifData, 'myGif.gif');
-//         const res = await fetch("https://upload.giphy.com/v1/gifs?api_key=dNkeI6zowJCt3piQ2sJ0ZOfdsiewNf1Q", {
-//          method: "post",
-//          body: form, 
-//          mode: "no-cors",
-//          redirect: "follow",
-//       })
-//       if(localStorage.getItem("mygif")) myGifs = localStorage.getItem("mygif").split(",")
-//       myGifs.push(res.response_id)
-//       console.log(res)
-//       localStorage.setItem('mygif',myGifs)
-//    } catch(error) {
-//       console.log(error)
-//    }
-//    return form;
-// }
+
 
 async function uploadGif(gifData) {
    const formData = new FormData();
@@ -74,10 +57,12 @@ async function uploadGif(gifData) {
        method: "POST",
        body: formData,
    });
-   const convertRequest = await request.json();
+   const data = await request.json();
+   localStorage.setItem("myGifs",data.data.id);
+   console.log(localStorage.getItem("myGifs"));
 
-   return convertRequest;
-}
+
+
 
 videoButton.addEventListener("click", (event) => {
    event.preventDefault();
