@@ -138,7 +138,7 @@ header {
       }
     }
     .results {
-      padding: 50px;
+      padding: 20px;
       color: var(--color-texto);
       max-width: 1400px;
       display: flex;
@@ -289,6 +289,9 @@ header {
         #search-icon {
           width: 5%;
         }
+      }
+      .results {
+        padding: 50px;
       }
       .text1 {
         span {
