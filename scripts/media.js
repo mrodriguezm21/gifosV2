@@ -60,11 +60,11 @@ async function uploadGif(gifData) {
    const data = await request.json();
    localStorage.setItem("myGifs",data.data.id);
    console.log(localStorage.getItem("myGifs"));
-
+}
 
 
 
 videoButton.addEventListener("click", (event) => {
    event.preventDefault();
    getStreamAndRecord()
-}
+});
