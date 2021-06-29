@@ -67,4 +67,4 @@ async function uploadGif(gifData) {
 videoButton.addEventListener("click", (event) => {
    event.preventDefault();
    getStreamAndRecord()
-})
+}
