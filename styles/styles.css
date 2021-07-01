@@ -5,7 +5,7 @@
   --crear-active: url("../assets/CTA-crear-gifo-active.svg");
   --crear-hover: url("../assets/CTA-crear-gifo-hover.svg");
   --menu-hamburguesa: url("../assets/burger.svg");
-  --menu-hamburguesa-cerrar: url("../assets/close.svg");
+  --cerrar: url("../assets/close.svg");
   --logo-mobile: url("../assets/logo-mobile.svg");
   --logo: url("../assets/logo-desktop.svg");
   --header-background-mobile: rgba(87, 46, 229, 0.9);
@@ -35,7 +35,7 @@
   --crear-active: url("../assets/CTA-crear-gifo-active-modo-noc.svg");
   --crear-hover: url("../assets/CTA-crear-gifo-hover-modo-noc.svg");
   --menu-hamburguesa: url("../assets/burger-modo-noct.svg");
-  --menu-hamburguesa-cerrar: url("../assets/close-modo-noct.svg");
+  --cerrar: url("../assets/close-modo-noct.svg");
   --logo-mobile: url("../assets/logo-mobile-modo-noct.svg");
   --logo: url("../assets/logo-modo-noc.svg");
   --header-background-mobile: #000000;
@@ -379,13 +379,9 @@ header .search form .search-div {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: "input  boton";
+  grid-template: " input  boton";
   -ms-grid-columns: 9fr 1fr;
       grid-template-columns: 9fr 1fr;
-}
-
-header .search form .search-div input {
-  grid-area: input;
 }
 
 header .search form .search-div input::-webkit-input-placeholder {
@@ -409,6 +405,7 @@ header .search form .search-div input::placeholder {
 }
 
 header .search form .search-div input {
+  grid-area: input;
   outline: none;
   margin-left: 15px;
   padding-left: 10px;
@@ -416,6 +413,17 @@ header .search form .search-div input {
   font-size: 13px;
   background-color: var(--background);
   color: var(--color-input);
+}
+
+header .search form .search-div #clearbutton {
+  display: none;
+  background: var(--cerrar) no-repeat;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
 }
 
 header .search form .search-div #search-icon {
@@ -632,7 +640,7 @@ header .favsContainer span {
   --crear-active: url("../assets/CTA-crear-gifo-active.svg");
   --crear-hover: url("../assets/CTA-crear-gifo-hover.svg");
   --menu-hamburguesa: url("../assets/burger.svg");
-  --menu-hamburguesa-cerrar: url("../assets/close.svg");
+  --cerrar: url("../assets/close.svg");
   --logo-mobile: url("../assets/logo-mobile.svg");
   --logo: url("../assets/logo-desktop.svg");
   --header-background-mobile: rgba(87, 46, 229, 0.9);
@@ -662,7 +670,7 @@ header .favsContainer span {
   --crear-active: url("../assets/CTA-crear-gifo-active-modo-noc.svg");
   --crear-hover: url("../assets/CTA-crear-gifo-hover-modo-noc.svg");
   --menu-hamburguesa: url("../assets/burger-modo-noct.svg");
-  --menu-hamburguesa-cerrar: url("../assets/close-modo-noct.svg");
+  --cerrar: url("../assets/close-modo-noct.svg");
   --logo-mobile: url("../assets/logo-mobile-modo-noct.svg");
   --logo: url("../assets/logo-modo-noc.svg");
   --header-background-mobile: #000000;

@@ -30,9 +30,8 @@ header {
     .burger-responsive {
       li:hover {
         border-bottom: solid 2px $sec_color;
-
       }
-      li:active{
+      li:active {
         color: $fourth_color;
         border-bottom: unset;
       }
@@ -51,7 +50,7 @@ header {
         align-items: center;
         margin-top: 5px;
         height: 100vh;
-        li {          
+        li {
           color: $dfourth_color;
           padding: 20px 0 15px;
           border-bottom: solid 2px $fourth_color;
@@ -95,17 +94,16 @@ header {
         padding: 10px 0;
         width: 100%;
         display: grid;
-        grid-template: "input  boton";
+        grid-template: " input  boton";
         grid-template-columns: 9fr 1fr;
 
-        input {
-          grid-area: input;
-        }
         input::placeholder {
           font-size: 13px;
           color: $fourth_color;
         }
         input {
+          grid-area: input;
+
           outline: none;
           margin-left: 15px;
           padding-left: 10px;
@@ -113,6 +111,15 @@ header {
           font-size: 13px;
           background-color: var(--background);
           color: var(--color-input);
+          
+        }
+        #clearbutton {
+          display: none;
+          background: var(--cerrar) no-repeat;
+          align-self: center;
+          width: 14px;
+          height: 14px;
+          cursor: pointer;
         }
         #search-icon {
           grid-area: boton;
@@ -186,21 +193,20 @@ header {
     }
   }
   .favsContainer {
-
     padding: 50px;
-      color: var(--color-texto);
-      max-width: 1400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      margin: 0 auto;
-      .cuadrogip {
-        width: 100%;
-        height: 275px;
-      }
-      
-    ul{
+    color: var(--color-texto);
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    .cuadrogip {
+      width: 100%;
+      height: 275px;
+    }
+
+    ul {
       margin: 0 auto;
     }
     span {
@@ -221,9 +227,8 @@ header {
       justify-content: space-between;
       flex-direction: row;
 
-      .head-mobile{
-      padding: unset;
-
+      .head-mobile {
+        padding: unset;
       }
 
       .logo {

@@ -46,14 +46,15 @@
         <form onsubmit="return false;">
           <div class="search-div">
             <input
-              type="text"
-              id="searchbox"
-              placeholder="Busca GIFOS y más"
-              autocomplete="off"
-              oninput="suggestions()"
+            type="text"
+            id="searchbox"
+            placeholder="Busca GIFOS y más"
+            autocomplete="off"
+            oninput="suggestions()"
             />
+            
+            <div id="clearbutton"></div>
             <div id="search-icon"></div>
-            <a id="clearbutton">X</a>
           </div>
           <div class="suggestions" id="suggestions">
             <span class="sg-0" onclick="get"></span>
@@ -106,6 +107,8 @@
         </div>
         <span class="copy">© GIFOS 2020 All Rights Reserved.</span>
       </div>
+
+
     </footer>
     <script src="./scripts/darkmode.js"></script>
     <script src="./scripts/suggestions.js"></script>
