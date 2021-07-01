@@ -48,6 +48,8 @@ function getStreamAndRecord() {
       })
 }
 
+
+
 async function uploadGif(gifData) {
    const formData = new FormData();
    formData.append("file", gifData);
@@ -55,12 +57,14 @@ async function uploadGif(gifData) {
        method: "POST",
        body: formData,
    });
-   const convertRequest = await request.json();
-
-   return convertRequest;
+   const data = await request.json();
+   localStorage.setItem("myGifs",data.data.id);
+   console.log(localStorage.getItem("myGifs"));
 }
+
+
 
 videoButton.addEventListener("click", (event) => {
    event.preventDefault();
    getStreamAndRecord()
-})
+});
