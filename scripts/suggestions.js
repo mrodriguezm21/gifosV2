@@ -26,5 +26,7 @@ elementos.forEach((span) => {
   span.onclick = function () {
     document.getElementsByTagName("span").value = this.innerHTML;
     input.value = this.innerHTML;
+    test=9;
+    getGifs(input.value);
   };
 });
