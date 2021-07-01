@@ -20,11 +20,15 @@ async function suggestions() {
 }
 
 let elementos = document.querySelectorAll(".suggestions span");
+const input = document.getElementById("searchbox");
 elementos.forEach((span) => {
-  const input = document.getElementById("searchbox");
-
-  span.onclick = function () {
-    document.getElementsByTagName("span").value = this.innerHTML;
-    input.value = this.innerHTML;
+  span.onclick = function () {    input.value = this.innerHTML;
+    getGifs(`${this.value}`)
   };
 });
+
+
+const clearbutton = document.getElementById("clearbutton")
+clearbutton.onclick = function(){
+  input.value = ""
+}
