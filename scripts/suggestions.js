@@ -13,7 +13,7 @@ async function suggestions() {
   }
   sug.style.display = "flex";
 
-  let url = `https://api.giphy.com/v1/tags/related/${input}?&limit=5&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
+  let url = `https://api.giphy.com/v1/tags/related/${input.value}?&limit=5&api_key=3mIxmBZUIIPyb8R69gtxaW8Hsh74dFKV`;
   const resp = await fetch(url);
   const json = await resp.json();
   const data = await json.data;
